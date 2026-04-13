@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | EditorsUnited</title>
+  <meta name="description" content="Contact EditorsUnited." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div>
+        <div class="brand-title">EditorsUnited</div>
+        <div class="brand-subtitle">Short-Form Editing</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="policies.html">Policies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-dark">
+      <div class="container contact-layout">
+        <div class="contact-side">
+          <div class="section-kicker">Contact</div>
+          <h2>Start the conversation.</h2>
+          <p>This page is built to collect leads. When you are ready, connect the form to Formspree, Tally, Basin, Web3Forms, or your own backend email route.</p>
+          <ul>
+            <li>Use it as a lead form</li>
+            <li>Or send clients directly to Stripe after qualification</li>
+            <li>Or add a booking link beside the form later</li>
+          </ul>
+          <p class="small-note">Right now, the form is visual and ready. It is not connected to a live submission endpoint yet.</p>
+        </div>
+        <div class="form-shell">
+          <form>
+            <div>
+              <label for="contact-name">Full name</label>
+              <input id="contact-name" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="contact-email">Email</label>
+              <input id="contact-email" type="email" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="contact-brand">Instagram / business</label>
+              <input id="contact-brand" type="text" placeholder="@brand or business name" />
+            </div>
+            <div>
+              <label for="contact-goals">What are you trying to achieve?</label>
+              <textarea id="contact-goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want."></textarea>
+            </div>
+            <button class="btn btn-light" type="button">Submit inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© <span data-year></span> EditorsUnited. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
