@@ -468,6 +468,90 @@ textarea.field-error {
   transform: none;
 }
 
+/* ── Logo marquee ── */
+.section-logos {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: white;
+  overflow: hidden;
+}
+
+.logos-label {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+
+.logos-marquee-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fade edges */
+.logos-marquee-wrap::before,
+.logos-marquee-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logos-marquee-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.logos-marquee-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.logos-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+
+.logo-pill:hover {
+  background: var(--accent);
+  border-color: rgba(10,37,88,0.2);
+}
+
 /* ── About page ── */
 .about-layout {
   display: grid;
