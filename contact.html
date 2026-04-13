@@ -6,6 +6,7 @@
   <title>Contact | EditorsUnited</title>
   <meta name="description" content="Contact EditorsUnited." />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -40,24 +41,30 @@
           <p class="small-note">Right now, the form is visual and ready. It is not connected to a live submission endpoint yet.</p>
         </div>
         <div class="form-shell">
-          <form>
+          <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="727e79a3-15c6-45dc-827c-8b836f81c691" />
+            <input type="hidden" name="subject" value="New inquiry — EditorsUnited contact page" />
+            <input type="hidden" name="from_name" value="EditorsUnited Website" />
             <div>
               <label for="contact-name">Full name</label>
-              <input id="contact-name" type="text" placeholder="Your name" />
+              <input id="contact-name" name="name" type="text" placeholder="Your name" required />
             </div>
             <div>
               <label for="contact-email">Email</label>
-              <input id="contact-email" type="email" placeholder="you@example.com" />
+              <input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
             </div>
             <div>
               <label for="contact-brand">Instagram / business</label>
-              <input id="contact-brand" type="text" placeholder="@brand or business name" />
+              <input id="contact-brand" name="brand" type="text" placeholder="@brand or business name" />
             </div>
             <div>
               <label for="contact-goals">What are you trying to achieve?</label>
-              <textarea id="contact-goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want."></textarea>
+              <textarea id="contact-goals" name="goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want." required></textarea>
             </div>
-            <button class="btn btn-light" type="button">Submit inquiry</button>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAAIYpHrxV1gLomf" data-theme="dark"></div>
+            <div class="form-success" data-success hidden>✓ Got it! We'll be in touch within 24 hours.</div>
+            <div class="form-error" data-error hidden>Something went wrong. Please try again or email us directly.</div>
+            <button class="btn btn-light" type="submit" data-submit-btn>Submit inquiry</button>
           </form>
         </div>
       </div>

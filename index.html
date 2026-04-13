@@ -6,6 +6,7 @@
   <title>EditorsUnited | Short-Form Editing That Turns Views Into Leads</title>
   <meta name="description" content="EditorsUnited helps businesses and creators turn TikTok and Instagram content into leads with short-form editing and smart conversion strategy." />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -174,24 +175,30 @@
           </ul>
         </div>
         <div class="form-shell">
-          <form>
+          <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="727e79a3-15c6-45dc-827c-8b836f81c691" />
+            <input type="hidden" name="subject" value="New inquiry — EditorsUnited website" />
+            <input type="hidden" name="from_name" value="EditorsUnited Website" />
             <div>
               <label for="name">Full name</label>
-              <input id="name" type="text" placeholder="Your name" />
+              <input id="name" name="name" type="text" placeholder="Your name" required />
             </div>
             <div>
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="Your email" />
+              <input id="email" name="email" type="email" placeholder="Your email" required />
             </div>
             <div>
               <label for="brand">Instagram / business</label>
-              <input id="brand" type="text" placeholder="@handle or business name" />
+              <input id="brand" name="brand" type="text" placeholder="@handle or business name" />
             </div>
             <div>
               <label for="goals">Tell us about your content goals</label>
-              <textarea id="goals" placeholder="What are you trying to achieve with your content?"></textarea>
+              <textarea id="goals" name="goals" placeholder="What are you trying to achieve with your content?" required></textarea>
             </div>
-            <button class="btn btn-light" type="button">Submit inquiry</button>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAAIYpHrxV1gLomf" data-theme="dark"></div>
+            <div class="form-success" data-success hidden>✓ Got it! We'll be in touch within 24 hours.</div>
+            <div class="form-error" data-error hidden>Something went wrong. Please try again or email us directly.</div>
+            <button class="btn btn-light" type="submit" data-submit-btn>Submit inquiry</button>
           </form>
         </div>
       </div>
