@@ -534,22 +534,33 @@ textarea.field-error {
 .logo-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.7rem 1.4rem;
-  border-radius: 999px;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 16px;
   border: 1px solid var(--line);
-  background: var(--soft);
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 0.95rem;
+  background: var(--white);
   white-space: nowrap;
-  letter-spacing: 0.01em;
-  transition: background 0.2s, border-color 0.2s;
+  transition: border-color 0.22s, box-shadow 0.22s;
   cursor: default;
+  min-width: 100px;
 }
 
 .logo-pill:hover {
-  background: var(--accent);
-  border-color: rgba(10,37,88,0.2);
+  border-color: rgba(10,37,88,0.22);
+  box-shadow: 0 4px 16px rgba(10,37,88,0.07);
+}
+
+.logo-img {
+  height: 34px;
+  width: auto;
+  max-width: 150px;
+  display: block;
+  filter: grayscale(100%) opacity(0.55);
+  transition: filter 0.25s;
+}
+
+.logo-pill:hover .logo-img {
+  filter: grayscale(0%) opacity(1);
 }
 
 /* ── About page ── */
