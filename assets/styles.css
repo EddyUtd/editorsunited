@@ -551,7 +551,7 @@ textarea.field-error {
 
 @keyframes marquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-25%); }
 }
 
 .logos-track {
@@ -596,6 +596,13 @@ textarea.field-error {
 
 .logo-pill:hover .logo-img {
   filter: grayscale(0%) opacity(1);
+}
+
+.logo-img-invert {
+  filter: invert(1) grayscale(100%) opacity(0.65);
+}
+.logo-pill:hover .logo-img-invert {
+  filter: invert(1) grayscale(0%) opacity(1);
 }
 
 .logo-pill.logo-missing {
