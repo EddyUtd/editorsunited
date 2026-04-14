@@ -65,7 +65,7 @@ img { max-width: 100%; display: block; }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.1rem;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -146,6 +146,17 @@ h1 {
 .btn-secondary { background: white; color: var(--navy); border-color: var(--line); }
 .btn-light { background: white; color: var(--navy); }
 .btn-block { width: 100%; }
+
+.eyebrow-link {
+  color: rgba(255,255,255,0.76);
+  text-decoration: underline;
+}
+
+.price-period {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
 
 .hero-card {
   background: linear-gradient(180deg, #eff5ff 0%, #f7faff 100%);
@@ -229,6 +240,13 @@ h1 {
   margin: 0.75rem 0 0;
 }
 
+.section h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0.75rem 0 0;
+}
+
 .section-intro {
   max-width: 48rem;
   color: var(--muted);
@@ -295,6 +313,10 @@ h1 {
   margin-top: 1rem;
   color: var(--navy);
   font-weight: 700;
+}
+
+.portfolio-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .pricing-grid {
@@ -603,6 +625,57 @@ textarea.field-error {
   place-items: center;
 }
 
+.about-panel {
+  align-items: start;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.about-panel-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-panel-title {
+  margin: 0;
+  color: white;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.about-panel-text {
+  margin: 0;
+  color: rgba(255,255,255,0.78);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-panel-points {
+  display: grid;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.about-panel-point {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+}
+
 .about-photo img {
   width: 100%;
   height: 100%;
@@ -692,6 +765,153 @@ textarea.field-error {
   font-size: 1.4rem;
 }
 
+.about-team-cta {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.feature-glyph {
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.about-team-strip .team-icon.team-icon-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+}
+
+.section-top-0 {
+  padding-top: 0;
+}
+
+.section-tight {
+  padding: 4rem 0;
+}
+
+.centered-copy {
+  text-align: center;
+  max-width: 640px;
+}
+
+.centered-row {
+  justify-content: center;
+}
+
+.case-grid,
+.case-method-grid,
+.case-quote-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.case-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.case-method-grid,
+.case-quote-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.case-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.case-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.case-card h3 {
+  margin: 0.8rem 0 0;
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+.case-card p {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+.case-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.25rem;
+}
+
+.case-points {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.case-points li {
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+  background: var(--soft);
+  border: 1px solid rgba(10,37,88,0.06);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.case-method-card {
+  background: var(--soft);
+  border: 1px solid rgba(10,37,88,0.08);
+  border-radius: var(--radius);
+  padding: 1.45rem;
+}
+
+.case-method-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.case-method-card p {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+}
+
+.case-quote {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.55rem;
+  box-shadow: var(--shadow);
+}
+
+.case-quote p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.case-quote strong {
+  display: block;
+  margin-top: 1rem;
+  color: var(--navy);
+  font-size: 0.92rem;
+}
+
 .about-team-strip p {
   margin: 0;
   color: var(--muted);
@@ -721,6 +941,12 @@ textarea.field-error {
 
   .about-stats {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-grid,
+  .case-method-grid,
+  .case-quote-grid {
+    grid-template-columns: 1fr;
   }
 }
 

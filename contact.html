@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | EditorsUnited</title>
-  <meta name="description" content="Contact EditorsUnited." />
+  <meta name="description" content="Contact EditorsUnited to talk about short-form editing, content strategy, and the right package for your brand." />
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -19,7 +19,8 @@
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="about.html" data-i18n="nav.about">About</a>
         <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="index.html#contact" class="active" data-i18n="nav.contact">Contact</a>
+        <a href="case-studies.html" data-i18n="nav.caseStudies">Case Studies</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="lang-switch">
         <button class="lang-btn" data-lang="en">EN</button>
@@ -33,14 +34,14 @@
       <div class="container contact-layout">
         <div class="contact-side">
           <div class="section-kicker" data-i18n="contactSection.kicker">Contact</div>
-          <h2 data-i18n="contactSection.h2">Let's build something that actually grows your brand.</h2>
+          <h1 data-i18n="contactSection.h2">Let's build something that actually grows your brand.</h1>
           <p data-i18n="contactSection.p">Fill out the form and we'll get back to you within 24 hours. Whether you're a creator, coach, or business — if you're serious about growing on short-form video, we want to hear from you.</p>
           <ul>
             <li data-i18n="contactSection.li1">Tell us about your content goals</li>
             <li data-i18n="contactSection.li2">We'll recommend the right package for you</li>
             <li data-i18n="contactSection.li3">No commitment required to reach out</li>
           </ul>
-          <p class="small-note">Prefer to go straight to it? <a href="index.html#pricing" style="color:rgba(255,255,255,0.7); text-decoration:underline;" data-i18n="contactSection.linkText">View our packages →</a></p>
+          <p class="small-note"><a class="eyebrow-link" href="index.html#pricing" data-i18n="contactSection.linkText">View our packages →</a></p>
         </div>
         <div class="form-shell">
           <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
@@ -53,7 +54,7 @@
             </div>
             <div>
               <label for="contact-email" data-i18n="form.emailLabel">Email</label>
-              <input id="contact-email" name="email" type="email" placeholder="you@example.com" data-i18n-ph="form.emailPH" required />
+              <input id="contact-email" name="email" type="email" placeholder="Your email" data-i18n-ph="form.emailPH" required />
             </div>
             <div>
               <label for="contact-brand" data-i18n="form.brandLabel">Instagram / business</label>
@@ -79,12 +80,14 @@
       <div class="footer-links">
         <a href="index.html" data-i18n="footer.home">Home</a>
         <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="case-studies.html" data-i18n="footer.caseStudies">Case Studies</a>
         <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
       </div>
     </div>
   </footer>
 
   <script src="assets/translations.js"></script>
+  <script src="assets/translations-overrides.js"></script>
   <script src="assets/site.js"></script>
 </body>
 </html>
