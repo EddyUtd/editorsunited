@@ -551,16 +551,20 @@ textarea.field-error {
 }
 
 .logo-img {
-  height: 34px;
+  height: 38px;
   width: auto;
-  max-width: 150px;
+  max-width: 160px;
   display: block;
-  filter: grayscale(100%) opacity(0.55);
+  filter: grayscale(100%) opacity(0.65);
   transition: filter 0.25s;
 }
 
 .logo-pill:hover .logo-img {
   filter: grayscale(0%) opacity(1);
+}
+
+.logo-pill.logo-missing {
+  display: none;
 }
 
 /* ── About page ── */
