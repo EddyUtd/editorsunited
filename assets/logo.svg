@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 44" fill="none">
+  <!-- Icon mark -->
+  <rect width="40" height="40" rx="10" fill="#0a2558" y="2"/>
+  <text x="20" y="29" text-anchor="middle" fill="#ffffff" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="-0.5">EU</text>
+  <!-- Wordmark -->
+  <text x="52" y="24" fill="#0a2558" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="17" letter-spacing="0.3">EditorsUnited</text>
+  <text x="52" y="37" fill="#5f6f8f" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="8.5" letter-spacing="3.5">SHORT-FORM EDITING</text>
+</svg>
