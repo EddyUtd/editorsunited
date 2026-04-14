@@ -23,6 +23,12 @@ const EU_TRANSLATIONS = {
       f2title:'Retention editing', f2desc:'Captions, structure, pacing, and cut rhythm designed to hold attention.',
       f3title:'Lead conversion', f3desc:'Content positioned to create trust and move viewers toward becoming clients.',
     },
+    reviews: {
+      kicker:'Client reviews',
+      h2:'4.9 stars across 50+ clients.',
+      countLabel:'from 50+ client reviews',
+      allStars:'★★★★★',
+    },
     portfolioPreview: {
       kicker:'Portfolio preview', h2:'Let the work speak for itself.',
       intro:'Your portfolio page is ready for unlisted YouTube links. For now, these cards are placeholders you can replace with live work later.',
@@ -146,6 +152,12 @@ const EU_TRANSLATIONS = {
       f1title:'Optimisation du hook', f1desc:'Nous façonnons les premières secondes pour arrêter le scroll et garder les gens engagés.',
       f2title:'Montage de rétention', f2desc:'Légendes, structure, rythme et montage conçus pour maintenir l\'attention.',
       f3title:'Conversion en prospects', f3desc:'Contenu positionné pour créer la confiance et amener les spectateurs à devenir clients.',
+    },
+    reviews: {
+      kicker:'Avis clients',
+      h2:'4,9 étoiles chez 50+ clients.',
+      countLabel:'de 50+ avis clients',
+      allStars:'★★★★★',
     },
     portfolioPreview: {
       kicker:'Aperçu du portfolio', h2:'Laissons le travail parler.',
