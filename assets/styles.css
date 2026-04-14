@@ -598,13 +598,6 @@ textarea.field-error {
   filter: grayscale(0%) opacity(1);
 }
 
-.logo-img-invert {
-  filter: invert(1) grayscale(100%) opacity(0.65);
-}
-.logo-pill:hover .logo-img-invert {
-  filter: invert(1) grayscale(0%) opacity(1);
-}
-
 .logo-pill.logo-missing {
   display: none;
 }
