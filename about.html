@@ -15,11 +15,15 @@
         <img src="assets/logo.svg" alt="EditorsUnited" height="44" style="display:block;" />
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="active" data-i18n="nav.about">About</a>
+        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </header>
 
@@ -31,32 +35,26 @@
 
         <!-- Left: text -->
         <div class="about-text">
-          <div class="section-kicker">About</div>
-          <h2>Michael Atta</h2>
-          <p class="lead">Editing since 2017. Built for results.</p>
-          <p>
-            I started as a freelancer and spent years in the trenches of video editing. Along the way I noticed something that most people in this industry overlook: not every editor understands the platform they're editing for.
-          </p>
-          <p>
-            Great content is not just about clean cuts or smooth transitions. It is about understanding what triggers a viewer to stop scrolling, watch to the end, and take action. That takes knowledge of social media trends, audience psychology, and platform algorithms — not just editing software.
-          </p>
-          <p>
-            That gap is exactly why I built EditorsUnited. A one-stop solution for content creators who want their videos to actually work. Every project we take on combines scripting, idea crafting, and strategy — so your content is built to perform from the very first frame. No hustle, no guesswork.
-          </p>
+          <div class="section-kicker" data-i18n="about.kicker">About</div>
+          <h2 data-i18n="about.name">Michael Atta</h2>
+          <p class="lead" data-i18n="about.subtitle">Editing since 2017. Built for results.</p>
+          <p data-i18n="about.p1">I started as a freelancer and spent years in the trenches of video editing. Along the way I noticed something that most people in this industry overlook: not every editor understands the platform they're editing for.</p>
+          <p data-i18n="about.p2">Great content is not just about clean cuts or smooth transitions. It is about understanding what triggers a viewer to stop scrolling, watch to the end, and take action. That takes knowledge of social media trends, audience psychology, and platform algorithms — not just editing software.</p>
+          <p data-i18n="about.p3">That gap is exactly why I built EditorsUnited. A one-stop solution for content creators who want their videos to actually work. Every project we take on combines scripting, idea crafting, and strategy — so your content is built to perform from the very first frame. No hustle, no guesswork.</p>
 
           <!-- Stats -->
           <div class="about-stats">
             <div class="about-stat">
-              <strong>2017</strong>
-              <span>Year we started editing professionally</span>
+              <strong data-i18n="about.stat1v">2017</strong>
+              <span data-i18n="about.stat1d">Year we started editing professionally</span>
             </div>
             <div class="about-stat">
-              <strong>150+</strong>
-              <span>Clients served across industries</span>
+              <strong data-i18n="about.stat2v">150+</strong>
+              <span data-i18n="about.stat2d">Clients served across industries</span>
             </div>
             <div class="about-stat">
-              <strong>2,500+</strong>
-              <span>Orders delivered and counting</span>
+              <strong data-i18n="about.stat3v">2,500+</strong>
+              <span data-i18n="about.stat3d">Orders delivered and counting</span>
             </div>
           </div>
         </div>
@@ -71,7 +69,7 @@
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
               <circle cx="12" cy="7" r="4"/>
             </svg>
-            <span>Photo coming soon</span>
+            <span data-i18n="about.photo">Photo coming soon</span>
           </div>
         </div>
 
@@ -81,25 +79,25 @@
     <!-- ── Pillars: what makes us different ── -->
     <section class="section section-soft">
       <div class="container">
-        <div class="section-kicker">Our approach</div>
-        <h2>Editing is only part of the job.</h2>
-        <p class="section-intro">We combine creative editing with real platform strategy, so every video has a purpose beyond looking good.</p>
+        <div class="section-kicker" data-i18n="about.appKicker">Our approach</div>
+        <h2 data-i18n="about.appH2">Editing is only part of the job.</h2>
+        <p class="section-intro" data-i18n="about.appIntro">We combine creative editing with real platform strategy, so every video has a purpose beyond looking good.</p>
 
         <div class="about-pillars">
           <article class="card">
             <div class="feature-icon" style="font-size:1.4rem; display:grid; place-items:center;">✍️</div>
-            <h3>Scripting & idea crafting</h3>
-            <p>Every great video starts before the camera rolls. We help you build concepts that are designed to resonate with your audience and stop the scroll.</p>
+            <h3 data-i18n="about.c1title">Scripting &amp; idea crafting</h3>
+            <p data-i18n="about.c1desc">Every great video starts before the camera rolls. We help you build concepts that are designed to resonate with your audience and stop the scroll.</p>
           </article>
           <article class="card">
             <div class="feature-icon" style="font-size:1.4rem; display:grid; place-items:center;">📈</div>
-            <h3>Strategy & trend awareness</h3>
-            <p>We stay on top of what is working across TikTok, Reels, and YouTube Shorts so your content is always in line with what platforms are pushing right now.</p>
+            <h3 data-i18n="about.c2title">Strategy &amp; trend awareness</h3>
+            <p data-i18n="about.c2desc">We stay on top of what is working across TikTok, Reels, and YouTube Shorts so your content is always in line with what platforms are pushing right now.</p>
           </article>
           <article class="card">
             <div class="feature-icon" style="font-size:1.4rem; display:grid; place-items:center;">🎬</div>
-            <h3>Lead-focused editing</h3>
-            <p>Hook optimization, retention pacing, and conversion framing — every edit is built to turn viewers into inquiries, not just views.</p>
+            <h3 data-i18n="about.c3title">Lead-focused editing</h3>
+            <p data-i18n="about.c3desc">Hook optimization, retention pacing, and conversion framing — every edit is built to turn viewers into inquiries, not just views.</p>
           </article>
         </div>
 
@@ -107,10 +105,10 @@
         <div class="about-team-strip">
           <div class="team-icon">🌐</div>
           <div>
-            <strong>A team built to serve you</strong>
-            <p>EditorsUnited operates with a dedicated team of editors ready to work with you in <strong>English</strong>, <strong>French</strong>, or fully <strong>bilingual</strong> — whatever fits your audience and brand.</p>
+            <strong data-i18n="about.teamTitle">A team built to serve you</strong>
+            <p data-i18n-html="about.teamDesc">EditorsUnited operates with a dedicated team of editors ready to work with you in <strong>English</strong>, <strong>French</strong>, or fully <strong>bilingual</strong> — whatever fits your audience and brand.</p>
           </div>
-          <a class="btn btn-secondary" href="index.html#contact" style="margin-left:auto; white-space:nowrap;">Work with us</a>
+          <a class="btn btn-secondary" href="index.html#contact" style="margin-left:auto; white-space:nowrap;" data-i18n="about.teamBtn">Work with us</a>
         </div>
 
       </div>
@@ -119,11 +117,11 @@
     <!-- ── CTA ── -->
     <section class="section section-dark" style="padding: 4rem 0;">
       <div class="container" style="text-align:center; max-width: 640px;">
-        <div class="section-kicker">Ready to grow?</div>
-        <h2 style="margin-bottom: 1.2rem;">Let's turn your content into a lead machine.</h2>
+        <div class="section-kicker" data-i18n="about.ctaKicker">Ready to grow?</div>
+        <h2 style="margin-bottom: 1.2rem;" data-i18n="about.ctaH2">Let's turn your content into a lead machine.</h2>
         <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-light" href="index.html#contact">Book a call</a>
-          <a class="btn btn-secondary" style="border-color:rgba(255,255,255,0.2); color:white;" href="index.html#pricing">View packages</a>
+          <a class="btn btn-light" href="index.html#contact" data-i18n="about.ctaBtn1">Book a call</a>
+          <a class="btn btn-secondary" style="border-color:rgba(255,255,255,0.2); color:white;" href="index.html#pricing" data-i18n="about.ctaBtn2">View packages</a>
         </div>
       </div>
     </section>
@@ -132,17 +130,18 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div>© <span data-year></span> EditorsUnited. All rights reserved.</div>
+      <div data-footer-rights>© 2025 EditorsUnited. All rights reserved.</div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="policies.html">Policies</a>
+        <a href="index.html" data-i18n="footer.home">Home</a>
+        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="index.html#contact" data-i18n="footer.contact">Contact</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+        <a href="policies.html" data-i18n="footer.policies">Policies</a>
       </div>
     </div>
   </footer>
 
+  <script src="assets/translations.js"></script>
   <script src="assets/site.js"></script>
 </body>
 </html>

@@ -16,11 +16,15 @@
         <img src="assets/logo.svg" alt="EditorsUnited" height="44" style="display:block;" />
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="index.html#contact" class="active">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="index.html#contact" class="active" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </header>
 
@@ -28,15 +32,15 @@
     <section class="section section-dark">
       <div class="container contact-layout">
         <div class="contact-side">
-          <div class="section-kicker">Contact</div>
-          <h2>Let's build something that actually grows your brand.</h2>
-          <p>Fill out the form and we'll get back to you within 24 hours. Whether you're a creator, coach, or business — if you're serious about growing on short-form video, we want to hear from you.</p>
+          <div class="section-kicker" data-i18n="contactSection.kicker">Contact</div>
+          <h2 data-i18n="contactSection.h2">Let's build something that actually grows your brand.</h2>
+          <p data-i18n="contactSection.p">Fill out the form and we'll get back to you within 24 hours. Whether you're a creator, coach, or business — if you're serious about growing on short-form video, we want to hear from you.</p>
           <ul>
-            <li>Tell us about your content goals</li>
-            <li>We'll recommend the right package for you</li>
-            <li>No commitment required to reach out</li>
+            <li data-i18n="contactSection.li1">Tell us about your content goals</li>
+            <li data-i18n="contactSection.li2">We'll recommend the right package for you</li>
+            <li data-i18n="contactSection.li3">No commitment required to reach out</li>
           </ul>
-          <p class="small-note">Prefer to go straight to it? <a href="index.html#pricing" style="color:rgba(255,255,255,0.7); text-decoration:underline;">View our packages →</a></p>
+          <p class="small-note">Prefer to go straight to it? <a href="index.html#pricing" style="color:rgba(255,255,255,0.7); text-decoration:underline;" data-i18n="contactSection.linkText">View our packages →</a></p>
         </div>
         <div class="form-shell">
           <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
@@ -44,25 +48,25 @@
             <input type="hidden" name="subject" value="New inquiry — EditorsUnited contact page" />
             <input type="hidden" name="from_name" value="EditorsUnited Website" />
             <div>
-              <label for="contact-name">Full name</label>
-              <input id="contact-name" name="name" type="text" placeholder="Your name" required />
+              <label for="contact-name" data-i18n="form.nameLabel">Full name</label>
+              <input id="contact-name" name="name" type="text" placeholder="Your name" data-i18n-ph="form.namePH" required />
             </div>
             <div>
-              <label for="contact-email">Email</label>
-              <input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
+              <label for="contact-email" data-i18n="form.emailLabel">Email</label>
+              <input id="contact-email" name="email" type="email" placeholder="you@example.com" data-i18n-ph="form.emailPH" required />
             </div>
             <div>
-              <label for="contact-brand">Instagram / business</label>
-              <input id="contact-brand" name="brand" type="text" placeholder="@brand or business name" />
+              <label for="contact-brand" data-i18n="form.brandLabel">Instagram / business</label>
+              <input id="contact-brand" name="brand" type="text" placeholder="@brand or business name" data-i18n-ph="form.brandPH" />
             </div>
             <div>
-              <label for="contact-goals">What are you trying to achieve?</label>
-              <textarea id="contact-goals" name="goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want." required></textarea>
+              <label for="contact-goals" data-i18n="form.goalsLabel">What are you trying to achieve?</label>
+              <textarea id="contact-goals" name="goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want." data-i18n-ph="form.goalsPH" required></textarea>
             </div>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAAAIYpHrxV1gLomf" data-theme="dark"></div>
-            <div class="form-success" data-success hidden>✓ Got it! We'll be in touch within 24 hours.</div>
-            <div class="form-error" data-error hidden>Something went wrong. Please try again or email us directly.</div>
-            <button class="btn btn-light" type="submit" data-submit-btn>Submit inquiry</button>
+            <div class="form-success" data-success hidden data-i18n="form.success">✓ Got it! We'll be in touch within 24 hours.</div>
+            <div class="form-error" data-error hidden data-i18n="form.error">Something went wrong. Please try again or email us directly.</div>
+            <button class="btn btn-light" type="submit" data-submit-btn data-i18n="form.submit">Submit inquiry</button>
           </form>
         </div>
       </div>
@@ -71,14 +75,16 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div>© <span data-year></span> EditorsUnited. All rights reserved.</div>
+      <div data-footer-rights>© 2025 EditorsUnited. All rights reserved.</div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="index.html" data-i18n="footer.home">Home</a>
+        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
       </div>
     </div>
   </footer>
+
+  <script src="assets/translations.js"></script>
   <script src="assets/site.js"></script>
 </body>
 </html>

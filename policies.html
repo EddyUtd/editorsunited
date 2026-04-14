@@ -15,59 +15,63 @@
         <img src="assets/logo.svg" alt="EditorsUnited" height="44" style="display:block;" />
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="section section-soft">
       <div class="container policy-card">
-        <div class="section-kicker">Service Policies</div>
-        <h2>Clear expectations. No surprises.</h2>
-        <p class="section-intro">Last updated: April 2025. These policies apply to all clients working with EditorsUnited. By starting a subscription or project with us, you agree to the terms below.</p>
+        <div class="section-kicker" data-i18n="policies.kicker">Service Policies</div>
+        <h2 data-i18n="policies.h2">Clear expectations. No surprises.</h2>
+        <p class="section-intro" data-i18n="policies.intro">Last updated: April 2025. These policies apply to all clients working with EditorsUnited. By starting a subscription or project with us, you agree to the terms below.</p>
 
         <div class="card" style="margin-top:2rem;">
-          <h3>1. Turnaround times</h3>
-          <p>Standard turnaround is <strong>3–5 business days</strong> per batch of videos once raw footage is received. Priority turnaround (included in the 30 Videos Pack) targets <strong>1–3 business days</strong>. Turnaround begins when we receive all required raw files and any creative direction. Delays caused by late footage delivery are not our responsibility.</p>
+          <h3 data-i18n="policies.s1h">1. Turnaround times</h3>
+          <p data-i18n-html="policies.s1p">Standard turnaround is <strong>3–5 business days</strong> per batch of videos once raw footage is received. Priority turnaround (included in the 30 Videos Pack) targets <strong>1–3 business days</strong>. Turnaround begins when we receive all required raw files and any creative direction. Delays caused by late footage delivery are not our responsibility.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>2. Revisions</h3>
-          <p>Each video includes <strong>2 rounds of revisions</strong> at no additional charge. Revision requests must be submitted within 5 business days of delivery. Requests beyond 2 rounds, or submitted after the window, may be subject to an additional fee. Major scope changes (e.g. full re-edits with new footage) are treated as new projects.</p>
+          <h3 data-i18n="policies.s2h">2. Revisions</h3>
+          <p data-i18n-html="policies.s2p">Each video includes <strong>2 rounds of revisions</strong> at no additional charge. Revision requests must be submitted within 5 business days of delivery. Requests beyond 2 rounds, or submitted after the window, may be subject to an additional fee. Major scope changes (e.g. full re-edits with new footage) are treated as new projects.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>3. Payment and billing</h3>
-          <p>All packages are billed as monthly subscriptions in Canadian dollars (CAD) via Stripe. Payment is due at the start of each billing period. Work begins once payment is confirmed. We do not offer net payment terms. Invoices are available through your Stripe customer portal.</p>
+          <h3 data-i18n="policies.s3h">3. Payment and billing</h3>
+          <p data-i18n="policies.s3p">All packages are billed as monthly subscriptions in Canadian dollars (CAD) via Stripe. Payment is due at the start of each billing period. Work begins once payment is confirmed. We do not offer net payment terms. Invoices are available through your Stripe customer portal.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>4. Cancellations and refunds</h3>
-          <p>You may cancel your subscription at any time through Stripe or by contacting us at <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>. Cancellations take effect at the end of the current billing period — you will not be charged for the next cycle. We do not offer refunds for partially used billing periods. If work has not yet started on a batch, please contact us as soon as possible and we will do our best to accommodate.</p>
+          <h3 data-i18n="policies.s4h">4. Cancellations and refunds</h3>
+          <p data-i18n-html="policies.s4p">You may cancel your subscription at any time through Stripe or by contacting us at <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>. Cancellations take effect at the end of the current billing period — you will not be charged for the next cycle. We do not offer refunds for partially used billing periods. If work has not yet started on a batch, please contact us as soon as possible and we will do our best to accommodate.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>5. Content ownership</h3>
-          <p>Upon full payment, you own the final edited videos. EditorsUnited retains the right to use the edited content for portfolio, promotional, and marketing purposes including on our website, social media, and in client presentations. If you prefer your content not to be featured, notify us in writing before the project begins and we will honour that request.</p>
+          <h3 data-i18n="policies.s5h">5. Content ownership</h3>
+          <p data-i18n="policies.s5p">Upon full payment, you own the final edited videos. EditorsUnited retains the right to use the edited content for portfolio, promotional, and marketing purposes including on our website, social media, and in client presentations. If you prefer your content not to be featured, notify us in writing before the project begins and we will honour that request.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>6. Raw footage and file delivery</h3>
-          <p>Clients are responsible for providing raw footage in a timely manner and in an accessible format (Google Drive, Dropbox, WeTransfer, or similar). We are not responsible for lost or corrupted files sent by the client. Edited files are delivered via a shared folder link and are available for download for 30 days after delivery. Please download and save your files promptly.</p>
+          <h3 data-i18n="policies.s6h">6. Raw footage and file delivery</h3>
+          <p data-i18n="policies.s6p">Clients are responsible for providing raw footage in a timely manner and in an accessible format (Google Drive, Dropbox, WeTransfer, or similar). We are not responsible for lost or corrupted files sent by the client. Edited files are delivered via a shared folder link and are available for download for 30 days after delivery. Please download and save your files promptly.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>7. Communication</h3>
-          <p>All project communication happens via email at <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>. We respond to emails within 24 hours on business days (Monday to Friday). We operate in English and French. For bilingual projects, let us know your preference at the start.</p>
+          <h3 data-i18n="policies.s7h">7. Communication</h3>
+          <p data-i18n-html="policies.s7p">All project communication happens via email at <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>. We respond to emails within 24 hours on business days (Monday to Friday). We operate in English and French. For bilingual projects, let us know your preference at the start.</p>
         </div>
 
         <div class="card" style="margin-top:1.5rem;">
-          <h3>8. Content responsibility</h3>
-          <p>Clients are solely responsible for the content of the raw footage they provide. EditorsUnited will not edit footage that contains illegal content, hate speech, or content that violates platform terms of service. We reserve the right to decline any project at our discretion.</p>
+          <h3 data-i18n="policies.s8h">8. Content responsibility</h3>
+          <p data-i18n="policies.s8p">Clients are solely responsible for the content of the raw footage they provide. EditorsUnited will not edit footage that contains illegal content, hate speech, or content that violates platform terms of service. We reserve the right to decline any project at our discretion.</p>
         </div>
 
       </div>
@@ -76,14 +80,16 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div>© <span data-year></span> EditorsUnited. All rights reserved.</div>
+      <div data-footer-rights>© 2025 EditorsUnited. All rights reserved.</div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="index.html" data-i18n="footer.home">Home</a>
+        <a href="index.html#contact" data-i18n="footer.contact">Contact</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
       </div>
     </div>
   </footer>
+
+  <script src="assets/translations.js"></script>
   <script src="assets/site.js"></script>
 </body>
 </html>

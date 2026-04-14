@@ -15,20 +15,24 @@
         <img src="assets/logo.svg" alt="EditorsUnited" height="44" style="display:block;" />
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero" style="padding-bottom:3rem;">
       <div class="container">
-        <div class="section-kicker">Portfolio</div>
-        <h1 style="max-width: 16ch;">Ready for your unlisted YouTube links.</h1>
-        <p class="lead">Each portfolio card below is intentionally prepared for a future YouTube link. Replace the placeholder href values or embed a YouTube iframe later.</p>
+        <div class="section-kicker" data-i18n="portfolio.kicker">Portfolio</div>
+        <h1 data-i18n="portfolio.h1">Ready for your unlisted YouTube links.</h1>
+        <p class="lead" data-i18n="portfolio.lead">Each portfolio card below is intentionally prepared for a future YouTube link. Replace the placeholder href values or embed a YouTube iframe later.</p>
       </div>
     </section>
 
@@ -38,58 +42,58 @@
           <article class="video-card">
             <div class="video-thumb">Video 01</div>
             <div class="video-body">
-              <h3>Portfolio video title</h3>
-              <p>Add a short result-focused description here.</p>
-              <a class="video-link" href="#">Add YouTube link later →</a>
+              <h3 data-i18n="portfolio.videoTitle">Portfolio video title</h3>
+              <p data-i18n="portfolio.videoDesc">Add a short result-focused description here.</p>
+              <a class="video-link" href="#" data-i18n="portfolio.videoLink">Add YouTube link later →</a>
             </div>
           </article>
           <article class="video-card">
             <div class="video-thumb">Video 02</div>
             <div class="video-body">
-              <h3>Portfolio video title</h3>
-              <p>Add a short result-focused description here.</p>
-              <a class="video-link" href="#">Add YouTube link later →</a>
+              <h3 data-i18n="portfolio.videoTitle">Portfolio video title</h3>
+              <p data-i18n="portfolio.videoDesc">Add a short result-focused description here.</p>
+              <a class="video-link" href="#" data-i18n="portfolio.videoLink">Add YouTube link later →</a>
             </div>
           </article>
           <article class="video-card">
             <div class="video-thumb">Video 03</div>
             <div class="video-body">
-              <h3>Portfolio video title</h3>
-              <p>Add a short result-focused description here.</p>
-              <a class="video-link" href="#">Add YouTube link later →</a>
+              <h3 data-i18n="portfolio.videoTitle">Portfolio video title</h3>
+              <p data-i18n="portfolio.videoDesc">Add a short result-focused description here.</p>
+              <a class="video-link" href="#" data-i18n="portfolio.videoLink">Add YouTube link later →</a>
             </div>
           </article>
           <article class="video-card">
             <div class="video-thumb">Video 04</div>
             <div class="video-body">
-              <h3>Portfolio video title</h3>
-              <p>Add a short result-focused description here.</p>
-              <a class="video-link" href="#">Add YouTube link later →</a>
+              <h3 data-i18n="portfolio.videoTitle">Portfolio video title</h3>
+              <p data-i18n="portfolio.videoDesc">Add a short result-focused description here.</p>
+              <a class="video-link" href="#" data-i18n="portfolio.videoLink">Add YouTube link later →</a>
             </div>
           </article>
           <article class="video-card">
             <div class="video-thumb">Video 05</div>
             <div class="video-body">
-              <h3>Portfolio video title</h3>
-              <p>Add a short result-focused description here.</p>
-              <a class="video-link" href="#">Add YouTube link later →</a>
+              <h3 data-i18n="portfolio.videoTitle">Portfolio video title</h3>
+              <p data-i18n="portfolio.videoDesc">Add a short result-focused description here.</p>
+              <a class="video-link" href="#" data-i18n="portfolio.videoLink">Add YouTube link later →</a>
             </div>
           </article>
           <article class="video-card">
             <div class="video-thumb">Video 06</div>
             <div class="video-body">
-              <h3>Portfolio video title</h3>
-              <p>Add a short result-focused description here.</p>
-              <a class="video-link" href="#">Add YouTube link later →</a>
+              <h3 data-i18n="portfolio.videoTitle">Portfolio video title</h3>
+              <p data-i18n="portfolio.videoDesc">Add a short result-focused description here.</p>
+              <a class="video-link" href="#" data-i18n="portfolio.videoLink">Add YouTube link later →</a>
             </div>
           </article>
         </div>
         <div class="band">
           <div>
-            <strong>This page is scalable.</strong>
-            <div class="small-note">You can keep duplicating portfolio cards or add embedded YouTube iframes later without changing the site structure.</div>
+            <strong data-i18n="portfolio.bandTitle">This page is scalable.</strong>
+            <div class="small-note" data-i18n="portfolio.bandNote">You can keep duplicating portfolio cards or add embedded YouTube iframes later without changing the site structure.</div>
           </div>
-          <a class="btn btn-secondary" href="index.html#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="index.html#contact" data-i18n="portfolio.bandBtn">Get in touch</a>
         </div>
       </div>
     </section>
@@ -97,14 +101,16 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div>© <span data-year></span> EditorsUnited. All rights reserved.</div>
+      <div data-footer-rights>© 2025 EditorsUnited. All rights reserved.</div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html" data-i18n="footer.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="index.html#contact" data-i18n="footer.contact">Contact</a>
       </div>
     </div>
   </footer>
+
+  <script src="assets/translations.js"></script>
   <script src="assets/site.js"></script>
 </body>
 </html>

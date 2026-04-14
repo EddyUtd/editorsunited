@@ -729,3 +729,39 @@ textarea.field-error {
   .stats { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: 1fr; }
 }
+
+/* ── Language switcher ── */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 0.28rem 0.72rem;
+  border-radius: 999px;
+  transition: background 0.18s, color 0.18s;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--navy);
+}
+
+.lang-btn.active {
+  background: var(--navy);
+  color: var(--white);
+}
