@@ -25,7 +25,7 @@ const EU_TRANSLATIONS = {
     },
     reviews: {
       kicker:'Client reviews',
-      h2:'4.9 stars across 50+ clients.',
+      h2:'What our clients are saying.',
       countLabel:'from 50+ client reviews',
       allStars:'★★★★★',
     },
@@ -155,7 +155,7 @@ const EU_TRANSLATIONS = {
     },
     reviews: {
       kicker:'Avis clients',
-      h2:'4,9 étoiles chez 50+ clients.',
+      h2:'Ce que disent nos clients.',
       countLabel:'de 50+ avis clients',
       allStars:'★★★★★',
     },
