@@ -817,113 +817,6 @@ textarea.field-error {
   justify-content: center;
 }
 
-.case-grid,
-.case-method-grid,
-.case-quote-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.case-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 2rem;
-}
-
-.case-method-grid,
-.case-quote-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 2rem;
-}
-
-.case-card {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.6rem;
-  box-shadow: var(--shadow);
-}
-
-.case-label {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.case-card h3 {
-  margin: 0.8rem 0 0;
-  font-size: 1.45rem;
-  line-height: 1.15;
-}
-
-.case-card p {
-  margin: 1rem 0 0;
-  color: var(--muted);
-}
-
-.case-logo-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1.25rem;
-}
-
-.case-points {
-  list-style: none;
-  padding: 0;
-  margin: 1.25rem 0 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.case-points li {
-  padding: 0.8rem 0.9rem;
-  border-radius: 16px;
-  background: var(--soft);
-  border: 1px solid rgba(10,37,88,0.06);
-  color: var(--ink);
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.case-method-card {
-  background: var(--soft);
-  border: 1px solid rgba(10,37,88,0.08);
-  border-radius: var(--radius);
-  padding: 1.45rem;
-}
-
-.case-method-card h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.case-method-card p {
-  margin: 0.9rem 0 0;
-  color: var(--muted);
-}
-
-.case-quote {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.55rem;
-  box-shadow: var(--shadow);
-}
-
-.case-quote p {
-  margin: 0;
-  color: var(--ink);
-  line-height: 1.7;
-}
-
-.case-quote strong {
-  display: block;
-  margin-top: 1rem;
-  color: var(--navy);
-  font-size: 0.92rem;
-}
 
 .about-team-strip p {
   margin: 0;
@@ -957,11 +850,7 @@ textarea.field-error {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .case-grid,
-  .case-method-grid,
-  .case-quote-grid {
-    grid-template-columns: 1fr;
-  }
+
 }
 
 @media (max-width: 960px) {
