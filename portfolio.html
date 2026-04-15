@@ -7,6 +7,7 @@
   <meta name="description" content="Explore the short-form formats EditorsUnited edits most often, from hook-first reels to authority clips and offer-driven promos." />
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +19,7 @@
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="about.html" data-i18n="nav.about">About</a>
         <a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="lang-switch">
         <button class="lang-btn" data-lang="en">EN</button>
@@ -44,7 +45,7 @@
             <div class="video-body">
               <h3 data-i18n="portfolio.card1Title">Hook-first reels</h3>
               <p data-i18n="portfolio.card1Desc">Short-form edits built to stop the scroll quickly and keep pacing tight from the first line.</p>
-              <a class="video-link" href="contact.html" data-i18n="portfolio.cardLink">Ask about this format →</a>
+              <a class="video-link" href="#contact" data-i18n="portfolio.cardLink">Ask about this format →</a>
             </div>
           </article>
           <article class="video-card">
@@ -52,7 +53,7 @@
             <div class="video-body">
               <h3 data-i18n="portfolio.card2Title">Authority clips</h3>
               <p data-i18n="portfolio.card2Desc">Talking-head and expert-led content designed to make the message feel sharp, credible, and easy to follow.</p>
-              <a class="video-link" href="contact.html" data-i18n="portfolio.cardLink">Ask about this format →</a>
+              <a class="video-link" href="#contact" data-i18n="portfolio.cardLink">Ask about this format →</a>
             </div>
           </article>
           <article class="video-card">
@@ -60,7 +61,7 @@
             <div class="video-body">
               <h3 data-i18n="portfolio.card3Title">Offer-driven promos</h3>
               <p data-i18n="portfolio.card3Desc">Clips that highlight an offer, product, or service without losing retention in the opening seconds.</p>
-              <a class="video-link" href="contact.html" data-i18n="portfolio.cardLink">Ask about this format →</a>
+              <a class="video-link" href="#contact" data-i18n="portfolio.cardLink">Ask about this format →</a>
             </div>
           </article>
         </div>
@@ -69,7 +70,49 @@
             <strong data-i18n="portfolio.bandTitle">Need a relevant sample?</strong>
             <div class="small-note" data-i18n="portfolio.bandNote">If you want to see work closer to your niche, reach out and we can share private examples when available.</div>
           </div>
-          <a class="btn btn-secondary" href="contact.html" data-i18n="portfolio.bandBtn">Ask about your niche</a>
+          <a class="btn btn-secondary" href="#contact" data-i18n="portfolio.bandBtn">Ask about your niche</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section section-dark">
+      <div class="container contact-layout">
+        <div class="contact-side">
+          <div class="section-kicker" data-i18n="contactSection.kicker">Contact</div>
+          <h2 data-i18n="contactSection.h2">Let's build something that actually grows your brand.</h2>
+          <p data-i18n="contactSection.p">Fill out the form and we'll get back to you within 24 hours. Whether you're a creator, coach, or business — if you're serious about growing on short-form video, we want to hear from you.</p>
+          <ul>
+            <li data-i18n="contactSection.li1">Tell us about your content goals</li>
+            <li data-i18n="contactSection.li2">We'll recommend the right package for you</li>
+            <li data-i18n="contactSection.li3">No commitment required to reach out</li>
+          </ul>
+          <p class="small-note"><a class="eyebrow-link" href="index.html#pricing" data-i18n="contactSection.linkText">View our packages →</a></p>
+        </div>
+        <div class="form-shell">
+          <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="727e79a3-15c6-45dc-827c-8b836f81c691" />
+            <input type="hidden" name="subject" value="New inquiry — EditorsUnited portfolio page" />
+            <input type="hidden" name="from_name" value="EditorsUnited Website" />
+            <div>
+              <label for="port-name" data-i18n="form.nameLabel">Full name</label>
+              <input id="port-name" name="name" type="text" placeholder="Your name" data-i18n-ph="form.namePH" required />
+            </div>
+            <div>
+              <label for="port-email" data-i18n="form.emailLabel">Email</label>
+              <input id="port-email" name="email" type="email" placeholder="Your email" data-i18n-ph="form.emailPH" required />
+            </div>
+            <div>
+              <label for="port-brand" data-i18n="form.brandLabel">Instagram / business</label>
+              <input id="port-brand" name="brand" type="text" placeholder="@brand or business name" data-i18n-ph="form.brandPH" />
+            </div>
+            <div>
+              <label for="port-goals" data-i18n="form.goalsLabel">What are you trying to achieve?</label>
+              <textarea id="port-goals" name="goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want." data-i18n-ph="form.goalsPH" required></textarea>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAAIYpHrxV1gLomf" data-theme="dark"></div>
+            <div class="form-success" data-success hidden data-i18n="form.success">✓ Got it! We'll be in touch within 24 hours.</div>
+            <div class="form-error" data-error hidden data-i18n="form.error">Something went wrong. Please try again or email us directly.</div>
+            <button class="btn btn-light" type="submit" data-submit-btn data-i18n="form.submit">Submit inquiry</button>
+          </form>
         </div>
       </div>
     </section>
@@ -80,7 +123,7 @@
       <div data-footer-rights>© 2025 EditorsUnited. All rights reserved.</div>
       <div class="footer-links">
         <a href="index.html" data-i18n="footer.home">Home</a>
-        <a href="contact.html" data-i18n="footer.contact">Contact</a>
+        <a href="#contact" data-i18n="footer.contact">Contact</a>
         <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
       </div>
     </div>
