@@ -21,6 +21,12 @@
     c3desc: 'Edits built to connect attention with a product, service, or next step without losing retention.',
   });
 
+  Object.assign(EU_TRANSLATIONS.en.contactSection, {
+    bookKicker: 'Book a call',
+    bookH2: 'Pick a time that works for you.',
+    bookIntro: 'Choose a slot and we\'ll talk about your content goals, the right package, and how we work together.',
+  });
+
   Object.assign(EU_TRANSLATIONS.en.form, {
     sending: 'Sending...',
     sent: 'Sent'
@@ -69,6 +75,12 @@
     c2desc: ‘Des montages courts qui aident les experts, coachs et dirigeants à paraître clairs, solides et faciles à suivre.’,
     c3title: ‘Contenu axé sur l’offre’,
     c3desc: ‘Des montages conçus pour relier l’attention à un produit, un service ou une prochaine étape sans perdre la rétention.’,
+  });
+
+  Object.assign(EU_TRANSLATIONS.fr.contactSection, {
+    bookKicker: 'Réserver un appel',
+    bookH2: 'Choisissez un créneau qui vous convient.',
+    bookIntro: 'Choisissez un horaire et nous parlerons de vos objectifs de contenu, du bon forfait et de notre façon de travailler ensemble.',
   });
 
   Object.assign(EU_TRANSLATIONS.fr.form, {
