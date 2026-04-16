@@ -44,7 +44,9 @@ function setLanguage(lang) {
   localStorage.setItem('eu-lang', lang);
   applyTranslations(lang);
   document.querySelectorAll('[data-lang]').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
 }
 

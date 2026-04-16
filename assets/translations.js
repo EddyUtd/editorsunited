@@ -1,5 +1,6 @@
 const EU_TRANSLATIONS = {
   en: {
+    a11y: { skip:'Skip to main content', langEn:'Switch to English', langFr:'Switch to French' },
     nav: { home:'Home', about:'About', portfolio:'Portfolio', contact:'Contact' },
     footer: { rights:'© {year} EditorsUnited. All rights reserved.', home:'Home', portfolio:'Portfolio', contact:'Contact', privacy:'Privacy', policies:'Policies' },
     hero: {
@@ -91,7 +92,7 @@ const EU_TRANSLATIONS = {
     },
     privacy: {
       kicker:'Privacy Policy', h2:'Your privacy matters to us.',
-      intro:'Last updated: April 2025. This policy explains what information we collect, how we use it, and how we keep it safe.',
+      intro:'Last updated: April 2026. This policy explains what information we collect, how we use it, and how we keep it safe.',
       s1h:'1. Information we collect',
       s1p:'When you submit our contact form, we collect the following information:',
       s1li1:'Your full name', s1li2:'Your email address', s1li3:'Your Instagram handle or business name', s1li4:'Your content goals and any message you provide',
@@ -117,7 +118,7 @@ const EU_TRANSLATIONS = {
     },
     policies: {
       kicker:'Service Policies', h2:'Clear expectations. No surprises.',
-      intro:'Last updated: April 2025. These policies apply to all clients working with EditorsUnited. By starting a subscription or project with us, you agree to the terms below.',
+      intro:'Last updated: April 2026. These policies apply to all clients working with EditorsUnited. By starting a subscription or project with us, you agree to the terms below.',
       s1h:'1. Turnaround times', s1p:'Standard turnaround is <strong>3–5 business days</strong> per batch of videos once raw footage is received. Priority turnaround (included in the 30 Videos Pack) targets <strong>1–3 business days</strong>. Turnaround begins when we receive all required raw files and any creative direction. Delays caused by late footage delivery are not our responsibility.',
       s2h:'2. Revisions', s2p:'Each video includes <strong>2 rounds of revisions</strong> at no additional charge. Revision requests must be submitted within 5 business days of delivery. Requests beyond 2 rounds, or submitted after the window, may be subject to an additional fee. Major scope changes (e.g. full re-edits with new footage) are treated as new projects.',
       s3h:'3. Payment and billing', s3p:'All packages are billed as monthly subscriptions in Canadian dollars (CAD) via Stripe. Payment is due at the start of each billing period. Work begins once payment is confirmed. We do not offer net payment terms. Invoices are available through your Stripe customer portal.',
@@ -130,6 +131,7 @@ const EU_TRANSLATIONS = {
   },
 
   fr: {
+    a11y: { skip:'Aller au contenu principal', langEn:'Passer à l\'anglais', langFr:'Passer au français' },
     nav: { home:'Accueil', about:'À propos', portfolio:'Portfolio', contact:'Contact' },
     footer: { rights:'© {year} EditorsUnited. Tous droits réservés.', home:'Accueil', portfolio:'Portfolio', contact:'Contact', privacy:'Confidentialité', policies:'Politiques' },
     hero: {
@@ -221,7 +223,7 @@ const EU_TRANSLATIONS = {
     },
     privacy: {
       kicker:'Politique de confidentialité', h2:'Votre vie privée est importante pour nous.',
-      intro:'Dernière mise à jour : Avril 2025. Cette politique explique les informations que nous collectons, comment nous les utilisons et comment nous les protégeons.',
+      intro:'Dernière mise à jour : Avril 2026. Cette politique explique les informations que nous collectons, comment nous les utilisons et comment nous les protégeons.',
       s1h:'1. Informations que nous collectons',
       s1p:'Lorsque vous soumettez notre formulaire de contact, nous collectons les informations suivantes :',
       s1li1:'Votre nom complet', s1li2:'Votre adresse courriel', s1li3:'Votre identifiant Instagram ou nom d\'entreprise', s1li4:'Vos objectifs de contenu et tout message fourni',
@@ -247,7 +249,7 @@ const EU_TRANSLATIONS = {
     },
     policies: {
       kicker:'Politiques de service', h2:'Des attentes claires. Aucune surprise.',
-      intro:'Dernière mise à jour : Avril 2025. Ces politiques s\'appliquent à tous les clients travaillant avec EditorsUnited. En commençant un abonnement ou un projet avec nous, vous acceptez les conditions ci-dessous.',
+      intro:'Dernière mise à jour : Avril 2026. Ces politiques s\'appliquent à tous les clients travaillant avec EditorsUnited. En commençant un abonnement ou un projet avec nous, vous acceptez les conditions ci-dessous.',
       s1h:'1. Délais de livraison', s1p:'Le délai standard est de <strong>3 à 5 jours ouvrables</strong> par lot de vidéos une fois les séquences brutes reçues. Le délai prioritaire (inclus dans le Forfait 30 vidéos) vise <strong>1 à 3 jours ouvrables</strong>. Les délais commencent lorsque nous recevons tous les fichiers requis.',
       s2h:'2. Révisions', s2p:'Chaque vidéo inclut <strong>2 tours de révisions</strong> sans frais supplémentaires. Les demandes de révision doivent être soumises dans les 5 jours ouvrables suivant la livraison. Les demandes au-delà de 2 tours peuvent être facturées.',
       s3h:'3. Paiement et facturation', s3p:'Tous les forfaits sont facturés sous forme d\'abonnements mensuels en dollars canadiens (CAD) via Stripe. Le paiement est dû au début de chaque période de facturation. Le travail commence une fois le paiement confirmé.',
