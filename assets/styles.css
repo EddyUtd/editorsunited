@@ -351,6 +351,13 @@ h1 {
   background: linear-gradient(135deg, var(--accent), white);
   border: 1px solid var(--line);
   margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+}
+.feature-icon svg {
+  width: 26px;
+  height: 26px;
 }
 
 .portfolio-grid {
