@@ -1249,52 +1249,82 @@ textarea.field-error {
   }
 }
 
-.services-steps {
+.services-timeline {
+  margin: 2.5rem auto 0;
+  max-width: 760px;
+}
+.timeline-step {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.4rem;
-  margin-top: 2rem;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.5rem;
+  position: relative;
+  padding-bottom: 2.5rem;
 }
-.service-step {
-  background: white;
-  border-radius: 24px;
-  padding: 1.8rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
-  display: flex;
-  flex-direction: column;
+.timeline-step:last-child { padding-bottom: 0; }
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 3rem;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+  transform: translateX(-1px);
 }
-.service-step .step-num {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--accent, #ffd66b);
-  background: var(--navy);
-  width: 2.4rem;
-  height: 2.4rem;
+.timeline-step:last-child::before { display: none; }
+.timeline-step .step-num {
+  width: 3rem;
+  height: 3rem;
   border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--navy);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.95rem;
   letter-spacing: 0;
-  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
-.service-step h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.25rem;
+.timeline-content {
+  padding-top: 0.4rem;
+}
+.timeline-outcome {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--navy);
+  background: var(--accent, #ffd66b);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
 }
-.service-step p {
+.timeline-content h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+  color: var(--navy);
+  line-height: 1.25;
+}
+.timeline-content p {
   color: var(--muted);
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem;
+  line-height: 1.6;
 }
-.service-step ul {
-  padding-left: 1rem;
+.timeline-content ul {
+  padding-left: 1.1rem;
   margin: 0;
 }
-.service-step li {
+.timeline-content li {
   color: var(--muted);
   margin: 0.4rem 0;
+  font-size: 0.95rem;
 }
 @media (max-width: 720px) {
-  .services-steps { grid-template-columns: 1fr; }
+  .services-timeline { padding: 0; }
+  .timeline-step { grid-template-columns: 2.5rem 1fr; gap: 1rem; padding-bottom: 2rem; }
+  .timeline-step::before { left: 1.25rem; top: 2.5rem; }
+  .timeline-step .step-num { width: 2.5rem; height: 2.5rem; font-size: 0.85rem; }
+  .timeline-content h3 { font-size: 1.15rem; }
 }
