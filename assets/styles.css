@@ -749,15 +749,18 @@ textarea.field-error {
 
 @keyframes marquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  to   { transform: translateX(-25%); }
 }
 
 .logos-track {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 56s linear infinite;
+}
+
+.logos-track .logo-pill {
+  margin-right: 1.25rem;
 }
 
 .logos-track:hover {
@@ -805,7 +808,8 @@ textarea.field-error {
   .logos-label { font-size: 0.65rem; letter-spacing: 0.18em; padding: 0 1rem; line-height: 1.4; }
   .logo-pill { padding: 0.45rem 1rem; }
   .logo-img { height: 28px; max-width: 110px; }
-  .logos-track { gap: 0.75rem; animation-duration: 22s; }
+  .logos-track .logo-pill { margin-right: 0.75rem; }
+  .logos-track { animation-duration: 44s; }
   .logos-marquee-wrap::before,
   .logos-marquee-wrap::after { width: 50px; }
 }
