@@ -749,7 +749,7 @@ textarea.field-error {
 
 @keyframes marquee {
   from { transform: translateX(0); }
-  to   { transform: translateX(-25%); }
+  to   { transform: translateX(-50%); }
 }
 
 .logos-track {
@@ -798,6 +798,16 @@ textarea.field-error {
 
 .logo-pill.logo-missing {
   display: none;
+}
+
+@media (max-width: 720px) {
+  .section-logos { padding: 1.75rem 0; }
+  .logos-label { font-size: 0.65rem; letter-spacing: 0.18em; padding: 0 1rem; line-height: 1.4; }
+  .logo-pill { padding: 0.45rem 1rem; }
+  .logo-img { height: 28px; max-width: 110px; }
+  .logos-track { gap: 0.75rem; animation-duration: 22s; }
+  .logos-marquee-wrap::before,
+  .logos-marquee-wrap::after { width: 50px; }
 }
 
 /* ── About page ── */
@@ -990,6 +1000,8 @@ textarea.field-error {
   text-transform: uppercase;
   color: var(--navy);
 }
+.feature-glyph svg { width: 26px; height: 26px; }
+.about-team-strip .team-icon svg { width: 26px; height: 26px; color: var(--navy); }
 
 .about-team-strip .team-icon.team-icon-label {
   font-size: 0.95rem;
