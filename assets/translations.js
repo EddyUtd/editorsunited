@@ -3,6 +3,7 @@ const EU_TRANSLATIONS = {
     a11y: { skip:'Skip to main content', langEn:'Switch to English', langFr:'Switch to French' },
     nav: { home:'Home', about:'About', portfolio:'Portfolio', contact:'Contact' },
     footer: { rights:'© {year} EditorsUnited. All rights reserved.', home:'Home', portfolio:'Portfolio', contact:'Contact', privacy:'Privacy', policies:'Policies' },
+    logos: { label:'Trusted by creators & businesses across industries' },
     hero: {
       badge:'Turning expertise into booked clients',
       h1:'Short-form video that fills your calendar — not just your feed.',
@@ -30,6 +31,7 @@ const EU_TRANSLATIONS = {
       h2:'What our clients are saying.',
       countLabel:'from 50+ client reviews',
       allStars:'★★★★★',
+      verifiedClient:'Verified client',
     },
     portfolioPreview: {
       kicker:'Recent work',
@@ -138,6 +140,7 @@ const EU_TRANSLATIONS = {
     a11y: { skip:'Aller au contenu principal', langEn:'Passer à l\'anglais', langFr:'Passer au français' },
     nav: { home:'Accueil', about:'À propos', portfolio:'Portfolio', contact:'Contact' },
     footer: { rights:'© {year} EditorsUnited. Tous droits réservés.', home:'Accueil', portfolio:'Portfolio', contact:'Contact', privacy:'Confidentialité', policies:'Politiques' },
+    logos: { label:'La confiance de créateurs et d\'entreprises dans plusieurs secteurs' },
     hero: {
       badge:'Transformer l\'expertise en clients réservés',
       h1:'Des vidéos courtes qui remplissent votre calendrier — pas juste votre fil.',
@@ -165,6 +168,7 @@ const EU_TRANSLATIONS = {
       h2:'Ce que disent nos clients.',
       countLabel:'de 50+ avis clients',
       allStars:'★★★★★',
+      verifiedClient:'Client vérifié',
     },
     portfolioPreview: {
       kicker:'Travaux récents',
