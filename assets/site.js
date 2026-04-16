@@ -7,7 +7,52 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('[data-contact-form]').forEach(setupForm);
+
+  const savedBilling = localStorage.getItem('eu-billing') || 'monthly';
+  setBilling(savedBilling);
+  document.querySelectorAll('[data-bill]').forEach((btn) => {
+    btn.addEventListener('click', () => setBilling(btn.dataset.bill));
+  });
 });
+
+function setBilling(mode) {
+  if (mode !== 'monthly' && mode !== 'annual') mode = 'monthly';
+  localStorage.setItem('eu-billing', mode);
+
+  document.querySelectorAll('.bill-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.bill === mode);
+    btn.setAttribute('aria-pressed', btn.dataset.bill === mode ? 'true' : 'false');
+  });
+
+  document.querySelectorAll('.pricing-grid').forEach((grid) => {
+    grid.setAttribute('data-billing', mode);
+  });
+
+  document.querySelectorAll('.price-current, .price-old').forEach((el) => {
+    const v = el.dataset[mode];
+    if (v !== undefined) el.textContent = v;
+  });
+
+  document.querySelectorAll('[data-bill-key]').forEach((el) => {
+    const base = el.dataset.billKey;
+    el.setAttribute('data-i18n', mode === 'annual' ? base + 'Annual' : base);
+  });
+
+  document.querySelectorAll('[data-cta-monthly]').forEach((a) => {
+    const target = mode === 'annual' ? a.dataset.ctaAnnual : a.dataset.ctaMonthly;
+    if (target) a.setAttribute('href', target);
+    if (target && target.startsWith('#')) {
+      a.removeAttribute('target');
+      a.removeAttribute('rel');
+    } else {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    }
+  });
+
+  const lang = document.documentElement.lang || localStorage.getItem('eu-lang') || 'en';
+  applyTranslations(lang);
+}
 
 function getT(lang, key) {
   if (typeof EU_TRANSLATIONS === 'undefined') return undefined;
