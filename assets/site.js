@@ -28,7 +28,7 @@ function setBilling(mode) {
     grid.setAttribute('data-billing', mode);
   });
 
-  document.querySelectorAll('.price-current, .price-old').forEach((el) => {
+  document.querySelectorAll('.price-current, .price-old, .price-lead-amount').forEach((el) => {
     const v = el.dataset[mode];
     if (v !== undefined) el.textContent = v;
   });
