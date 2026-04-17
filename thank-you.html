@@ -8,6 +8,40 @@
   <meta name="robots" content="noindex, follow" />
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .thankyou-page .badge {
+      background: #d1fae5;
+      color: #065f46;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #6ee7b7;
+    }
+    .thankyou-page .badge svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 3;
+    }
+    .thankyou-page .feature-icon {
+      background: #d1fae5;
+      color: #047857;
+    }
+    .thankyou-page h1 {
+      position: relative;
+    }
+    .thankyou-page .hero::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      border-radius: 0 0 4px 4px;
+    }
+    .thankyou-page .hero { position: relative; }
+  </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +51,7 @@
     gtag('event', 'purchase', { currency: 'CAD', value: 1, source: 'stripe_payment_link' });
   </script>
 </head>
-<body>
+<body class="thankyou-page">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
@@ -41,7 +75,7 @@
   <main id="main">
     <section class="hero">
       <div class="container centered-copy">
-        <div class="badge" data-i18n="thankyou.badge">Payment confirmed</div>
+        <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="thankyou.badge">Payment confirmed</span></div>
         <h1 data-i18n="thankyou.h1">You're in — welcome to EditorsUnited.</h1>
         <p class="lead" data-i18n="thankyou.lead">Your subscription is active. Stripe just emailed you a receipt. Here's exactly what happens next so you can hit the ground running.</p>
       </div>
