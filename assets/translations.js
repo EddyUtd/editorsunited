@@ -206,6 +206,13 @@ const EU_TRANSLATIONS = {
       s7h:'7. Communication', s7p:'All project communication happens via email at <a href="mailto:support@editorsunited.com" style="color:var(--navy);font-weight:600;">support@editorsunited.com</a>. We respond to emails within 24 hours on business days (Monday to Friday). We operate in English and French.',
       s8h:'8. Content responsibility', s8p:'Clients are solely responsible for the content of the raw footage they provide. EditorsUnited will not edit footage that contains illegal content, hate speech, or content that violates platform terms of service. We reserve the right to decline any project at our discretion.',
     },
+    notfound: {
+      kicker:'Page not found',
+      h1:'This edit ended up on the cutting room floor.',
+      lead:'The page you\'re looking for either moved, never existed, or was scrapped in revisions. Either way — let\'s get you back to something useful.',
+      ctaHome:'Back to home',
+      ctaBook:'Book a call',
+    },
   },
 
   fr: {
@@ -414,6 +421,13 @@ const EU_TRANSLATIONS = {
       s6h:'6. Séquences brutes et livraison des fichiers', s6p:'Les clients sont responsables de fournir les séquences brutes en temps opportun dans un format accessible (Google Drive, Dropbox, WeTransfer ou similaire). Les fichiers montés sont disponibles en téléchargement pendant 30 jours après la livraison.',
       s7h:'7. Communication', s7p:'Toute la communication de projet se fait par courriel à <a href="mailto:support@editorsunited.com" style="color:var(--navy);font-weight:600;">support@editorsunited.com</a>. Nous répondons aux courriels dans les 24 heures les jours ouvrables. Nous travaillons en anglais et en français.',
       s8h:'8. Responsabilité du contenu', s8p:'Les clients sont seuls responsables du contenu des séquences brutes qu\'ils fournissent. EditorsUnited ne montera pas de séquences contenant du contenu illégal, des discours haineux ou du contenu qui viole les conditions d\'utilisation des plateformes.',
+    },
+    notfound: {
+      kicker:'Page introuvable',
+      h1:'Ce montage a fini sur le sol de la salle de coupe.',
+      lead:'La page que vous cherchez a été déplacée, n\'a jamais existé, ou a été coupée au montage. Dans tous les cas — revenons à quelque chose d\'utile.',
+      ctaHome:'Retour à l\'accueil',
+      ctaBook:'Réserver un appel',
     },
   }
 };
