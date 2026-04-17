@@ -20,7 +20,6 @@
   <meta name="twitter:image" content="https://editorsunited.com/assets/og-image.jpg" />
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
@@ -66,7 +65,12 @@
         </div>
         <div class="hero-card">
           <div class="hero-video">
-            <iframe src="https://www.youtube.com/embed/TpbBaj3n_BM" title="EditorsUnited featured work" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="lite-youtube" data-yt-id="TpbBaj3n_BM" role="button" tabindex="0" aria-label="Play featured video">
+              <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/TpbBaj3n_BM/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360" />
+              <span class="lite-youtube-play" aria-hidden="true">
+                <svg viewBox="0 0 68 48"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.5.7 34 .7 34 .7s-21.5 0-26.6 1c-2.9.8-5.1 3.1-5.9 6C.5 12.8.5 24 .5 24s0 11.2 1 16.3c.8 2.9 3 5.2 5.9 6 5.1 1 26.6 1 26.6 1s21.5 0 26.6-1c2.9-.8 5.1-3.1 5.9-6 1-5.1 1-16.3 1-16.3s0-11.2-1-16.3z" fill="#f00"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+              </span>
+            </div>
           </div>
           <div class="hero-note" data-i18n="hero.heroNote">A taste of what we edit every month. Full portfolio linked below.</div>
         </div>

@@ -13,7 +13,51 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-bill]').forEach((btn) => {
     btn.addEventListener('click', () => setBilling(btn.dataset.bill));
   });
+
+  setupLiteYouTube();
+  setupLazyTurnstile();
 });
+
+function setupLiteYouTube() {
+  document.querySelectorAll('.lite-youtube').forEach((el) => {
+    const activate = () => {
+      const id = el.dataset.ytId;
+      if (!id || el.classList.contains('lyt-loaded')) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      iframe.title = el.getAttribute('aria-label') || 'Video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      el.appendChild(iframe);
+      el.classList.add('lyt-loaded');
+    };
+    el.addEventListener('click', activate);
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
+  });
+}
+
+function setupLazyTurnstile() {
+  const widgets = document.querySelectorAll('.cf-turnstile');
+  if (!widgets.length) return;
+  let loaded = false;
+  const load = () => {
+    if (loaded) return;
+    loaded = true;
+    const s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    s.async = true;
+    s.defer = true;
+    document.head.appendChild(s);
+  };
+  if (!('IntersectionObserver' in window)) { load(); return; }
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) { load(); io.disconnect(); }
+  }, { rootMargin: '600px' });
+  widgets.forEach((w) => io.observe(w));
+}
 
 function setBilling(mode) {
   if (mode !== 'monthly' && mode !== 'annual') mode = 'monthly';
