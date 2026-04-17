@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to EditorsUnited — You're in</title>
+  <meta name="description" content="Thanks for subscribing to EditorsUnited. Here's what happens next and how to book your onboarding call." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VQ6RZ101PV');
+    gtag('event', 'purchase', { currency: 'CAD', value: 1, source: 'stripe_payment_link' });
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" style="display:flex;align-items:center;">
+        <img src="assets/logo.svg" alt="EditorsUnited" width="220" height="44" style="display:block;" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container centered-copy">
+        <div class="badge" data-i18n="thankyou.badge">Payment confirmed</div>
+        <h1 data-i18n="thankyou.h1">You're in — welcome to EditorsUnited.</h1>
+        <p class="lead" data-i18n="thankyou.lead">Your subscription is active. Stripe just emailed you a receipt. Here's exactly what happens next so you can hit the ground running.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-kicker" data-i18n="thankyou.stepsKicker">What happens next</div>
+        <h2 data-i18n="thankyou.stepsH2">Three steps to your first edit.</h2>
+        <div class="grid-3" style="margin-top:2rem;">
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+              </svg>
+            </div>
+            <h3 data-i18n="thankyou.s1h">Check your inbox</h3>
+            <p data-i18n="thankyou.s1p">Stripe just sent your payment receipt. Save it for your records — that's your proof of subscription.</p>
+          </article>
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <path d="M16 2v4M8 2v4M3 10h18"/>
+              </svg>
+            </div>
+            <h3 data-i18n="thankyou.s2h">Book your onboarding call</h3>
+            <p data-i18n="thankyou.s2p">A 15-minute call where we set up your private upload folder, learn your brand voice, and map out your first batch of edits.</p>
+          </article>
+          <article class="card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <h3 data-i18n="thankyou.s3h">Your first edits go live</h3>
+            <p data-i18n="thankyou.s3p">Upload your raw footage after the call. We deliver the first round within your package's turnaround window — ready for review.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="book">
+      <div class="container">
+        <div class="section-kicker" data-i18n="thankyou.bookKicker">Next step</div>
+        <h2 data-i18n="thankyou.bookH2">Book your onboarding call below.</h2>
+        <p class="section-intro" data-i18n="thankyou.bookIntro">Pick any slot that works — this call is how we get your content pipeline started.</p>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/editorsunited/1-on-1-meeting-with-editorsunited-ltd" style="min-width:320px;height:700px;margin-top:2rem;border-radius:24px;overflow:hidden;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="band">
+          <div>
+            <strong data-i18n="thankyou.supportTitle">Questions before the call?</strong>
+            <div class="small-note" data-i18n="thankyou.supportNote">Email us any time and we'll get back within 24 hours on business days.</div>
+          </div>
+          <a class="btn btn-secondary" href="mailto:support@editorsunited.com" data-i18n="thankyou.supportBtn">Email support →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div data-footer-rights>© 2026 EditorsUnited. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html" data-i18n="footer.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="contact.html" data-i18n="footer.contact">Contact</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+        <a href="policies.html" data-i18n="footer.policies">Policies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/translations.js"></script>
+  <script src="assets/translations-auto.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
