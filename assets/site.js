@@ -16,7 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupLiteYouTube();
   setupLazyTurnstile();
+  setupCalendlyTracking();
+  setupBookCallTracking();
 });
+
+function track(name, params) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, params || {});
+  }
+}
+
+function setupCalendlyTracking() {
+  window.addEventListener('message', (e) => {
+    if (!e.data || typeof e.data !== 'object') return;
+    if (e.data.event === 'calendly.event_scheduled') {
+      track('book_call', { method: 'calendly', value: 1, currency: 'CAD' });
+    }
+  });
+}
+
+function setupBookCallTracking() {
+  document.querySelectorAll('a[href*="calendly.com"], a[href*="#book"], a[href*="contact.html#book"]').forEach((a) => {
+    a.addEventListener('click', () => track('book_call_click', { link_url: a.href }));
+  });
+}
 
 function setupLiteYouTube() {
   document.querySelectorAll('.lite-youtube').forEach((el) => {
@@ -175,6 +198,7 @@ function setupForm(form) {
         form.reset();
         successEl.hidden = false;
         btn.textContent = getT(document.documentElement.lang || 'en', 'form.sent') || 'Sent';
+        track('generate_lead', { method: 'contact_form', value: 1, currency: 'CAD' });
       } else {
         throw new Error(json.message || 'Submission failed');
       }
