@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupLazyTurnstile();
   setupCalendlyTracking();
   setupBookCallTracking();
+  setupCookieBanner();
 });
 
 function track(name, params) {
@@ -60,6 +61,54 @@ function setupLiteYouTube() {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
   });
+}
+
+function setupCookieBanner() {
+  const stored = localStorage.getItem('eu-cookie-consent');
+  if (stored === 'accepted') {
+    grantAnalyticsConsent();
+    return;
+  }
+  if (stored === 'rejected') return;
+
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-live', 'polite');
+  banner.setAttribute('aria-label', 'Cookie consent');
+  banner.innerHTML = `
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <strong data-i18n="cookies.title">We use cookies</strong>
+        <p data-i18n-html="cookies.body">We use essential cookies to run the site and — with your consent — Google Analytics to understand how visitors use it. You can change your choice anytime from our <a href="privacy.html">privacy policy</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-secondary cookie-btn-reject" data-i18n="cookies.reject">Reject</button>
+        <button type="button" class="btn btn-primary cookie-btn-accept" data-i18n="cookies.accept">Accept</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+
+  const lang = document.documentElement.lang || localStorage.getItem('eu-lang') || 'en';
+  applyTranslations(lang);
+
+  const hide = () => banner.remove();
+  banner.querySelector('.cookie-btn-accept').addEventListener('click', () => {
+    localStorage.setItem('eu-cookie-consent', 'accepted');
+    grantAnalyticsConsent();
+    hide();
+  });
+  banner.querySelector('.cookie-btn-reject').addEventListener('click', () => {
+    localStorage.setItem('eu-cookie-consent', 'rejected');
+    hide();
+  });
+}
+
+function grantAnalyticsConsent() {
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
 }
 
 function setupLazyTurnstile() {
