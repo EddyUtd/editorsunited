@@ -5,15 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | EditorsUnited</title>
   <meta name="description" content="Privacy policy for EditorsUnited. How we collect, use, store, and protect your personal information under Quebec Law 25 and Canadian PIPEDA." />
-  <link rel="canonical" href="https://editorsunited.com/privacy.html" />
+  <link rel="canonical" href="https://editorsunited.com/privacy" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="EditorsUnited" />
-  <meta property="og:url" content="https://editorsunited.com/privacy.html" />
+  <meta property="og:url" content="https://editorsunited.com/privacy" />
   <meta property="og:title" content="Privacy Policy | EditorsUnited" />
   <meta property="og:description" content="Privacy policy for EditorsUnited. How we collect, use, store, and protect your personal information under Quebec Law 25 and Canadian PIPEDA." />
   <meta property="og:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <link rel="stylesheet" href="assets/styles.css?v=20260425" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta property="og:locale" content="en_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | EditorsUnited" />
+  <meta name="twitter:description" content="Privacy policy for EditorsUnited. How we collect, use, store, and protect your personal information under Quebec Law 25 and Canadian PIPEDA." />
+  <meta name="twitter:image" content="https://editorsunited.com/assets/og-image.jpg" />
+  <meta name="theme-color" content="#0B0D12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260710" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20260710" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script>document.documentElement.classList.add('js');</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,36 +39,46 @@
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" style="display:flex;align-items:center;">
-        <img src="assets/logo.svg" alt="EditorsUnited" width="220" height="44" style="display:block;" />
+      <a class="brand" href="/" aria-label="EditorsUnited — Home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="32" height="32" rx="8" fill="#141821" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+          <path d="M8 26h18" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <path d="M8 26v-2.5M13 26v-2.5M22 26v-2.5M26 26v-2.5" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <rect x="16.1" y="13" width="1.8" height="12" fill="#FFC94A"/>
+          <path d="M12 7h10v4l-5 4-5-4z" fill="#FFC94A"/>
+        </svg>
+        <span class="brand-word">Editors<em>United</em></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+      <span class="header-tc" data-header-tc aria-hidden="true">TC 00:00:00</span>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact#book" data-i18n="nav.cta">Book a call</a>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
+        <button class="lang-btn" data-lang="en" aria-label="Switch to English" data-i18n-aria="a11y.langEn" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Passer au français" aria-pressed="false" lang="fr">FR</button>
       </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
     <section class="section">
       <div class="container policy-card">
-        <div class="section-kicker" data-i18n="privacy.kicker">Privacy Policy</div>
-        <h1 data-i18n="privacy.h2">Your privacy matters to us.</h1>
-        <p class="section-intro" data-i18n="privacy.intro">Effective date: April 18, 2026. This policy explains what personal information EditorsUnited collects, how we use it, where it's stored, your rights under Quebec Law 25 and Canadian PIPEDA, and how to contact us about your data.</p>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 01 ·</span><span data-i18n="privacy.kicker">Privacy Policy</span></div>
+        <h1 data-i18n="privacy.h2" data-reveal>Your privacy matters to us.</h1>
+        <p class="section-intro" data-i18n="privacy.intro" data-reveal>Effective date: April 18, 2026. This policy explains what personal information EditorsUnited collects, how we use it, where it's stored, your rights under Quebec Law 25 and Canadian PIPEDA, and how to contact us about your data.</p>
 
-        <div class="card" style="margin-top:2rem;">
+        <div class="card" data-reveal style="margin-top:2rem;">
           <h3 data-i18n="privacy.s0h">Privacy officer</h3>
-          <p data-i18n-html="privacy.s0p">EditorsUnited's designated privacy officer is <strong style="color:var(--ink);">Michael Attia</strong>, reachable at <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>. All privacy questions, data access requests, and complaints are handled directly by the privacy officer within 30 days, as required by Quebec Law 25.</p>
+          <p data-i18n-html="privacy.s0p">EditorsUnited's designated privacy officer is <strong style="color:var(--ink);">Michael Attia</strong>, reachable at <a href="mailto:support@editorsunited.com">support@editorsunited.com</a>. All privacy questions, data access requests, and complaints are handled directly by the privacy officer within 30 days, as required by Quebec Law 25.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s1h">1. Information we collect</h3>
           <p data-i18n="privacy.s1p">We collect only the information needed to respond to inquiries, deliver our services, and meet our legal obligations:</p>
           <ul style="margin-top:0.75rem; padding-left:1.2rem; color:var(--muted);">
@@ -68,7 +90,7 @@
           </ul>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s2h">2. How we use your information</h3>
           <p data-i18n="privacy.s2p">We use your information only for the following purposes:</p>
           <ul style="margin-top:0.75rem; padding-left:1.2rem; color:var(--muted);">
@@ -81,7 +103,7 @@
           <p style="margin-top:0.75rem;" data-i18n="privacy.s2p2">We do not sell, rent, or share your personal information with third parties for marketing purposes — ever.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s3h">3. Third-party processors</h3>
           <p data-i18n="privacy.s3p">We use the following trusted service providers. Each has its own privacy policy that we encourage you to review:</p>
           <ul style="margin-top:0.75rem; padding-left:1.2rem; color:var(--muted);">
@@ -94,22 +116,25 @@
           </ul>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s4h">4. Where your data is stored (cross-border transfers)</h3>
           <p data-i18n="privacy.s4p">As required by Quebec Law 25, we disclose that some of your personal information is stored on servers located outside Quebec, including in the United States and Europe. All providers listed above are bound by contractual data protection obligations equivalent to those required under Quebec and Canadian law. By using our services, you consent to this cross-border processing.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s5h">5. Cookies and analytics</h3>
           <p data-i18n="privacy.s5p">We use two types of cookies:</p>
           <ul style="margin-top:0.75rem; padding-left:1.2rem; color:var(--muted);">
             <li style="margin-bottom:0.4rem;" data-i18n-html="privacy.s5li1"><strong style="color:var(--ink);">Essential cookies</strong> — set by Cloudflare for site security. These cannot be disabled.</li>
             <li style="margin-bottom:0.4rem;" data-i18n-html="privacy.s5li2"><strong style="color:var(--ink);">Analytics cookies</strong> — Google Analytics 4 (with IP anonymization). These only load if you click "Accept" on our cookie banner. You can change your choice anytime by clearing site data.</li>
+            <li style="margin-bottom:0.4rem;" data-i18n-html="privacy.s5li3"><strong style="color:var(--ink);">Scheduling cookies</strong> — pages that include our Calendly booking widget (contact, about, welcome page) load Calendly, which sets its own functional cookies. See Calendly&#39;s privacy policy for details.</li>
           </ul>
           <p style="margin-top:0.75rem;" data-i18n="privacy.s5p2">We do not use advertising cookies or track you across other websites.</p>
+          <p><button type="button" class="btn btn-secondary" data-cookie-reset data-i18n="privacy.s5reset">Reset my cookie choice</button></p>
+          <p class="small-note" data-cookie-reset-done hidden data-i18n="privacy.s5resetDone">Done — the cookie banner will appear again on your next page load.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s6h">6. How long we keep your data</h3>
           <p data-i18n="privacy.s6p">We retain personal information only as long as necessary:</p>
           <ul style="margin-top:0.75rem; padding-left:1.2rem; color:var(--muted);">
@@ -120,7 +145,7 @@
           </ul>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s7h">7. Your rights</h3>
           <p data-i18n="privacy.s7p">Under Quebec Law 25 and Canadian PIPEDA, you have the right to:</p>
           <ul style="margin-top:0.75rem; padding-left:1.2rem; color:var(--muted);">
@@ -131,47 +156,51 @@
             <li style="margin-bottom:0.4rem;" data-i18n="privacy.s7li5">Receive a copy of your information in a portable, structured format</li>
             <li style="margin-bottom:0.4rem;" data-i18n="privacy.s7li6">Lodge a complaint with the Commission d'accès à l'information du Québec or the Office of the Privacy Commissioner of Canada</li>
           </ul>
-          <p style="margin-top:0.75rem;" data-i18n-html="privacy.s7p2">To exercise any of these rights, email <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>. We respond within 30 days.</p>
+          <p style="margin-top:0.75rem;" data-i18n-html="privacy.s7p2">To exercise any of these rights, email <a href="mailto:support@editorsunited.com">support@editorsunited.com</a>. We respond within 30 days.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s8h">8. Data security and breach notification</h3>
           <p data-i18n="privacy.s8p">We use industry-standard safeguards including TLS encryption in transit, access controls, and vetted third-party processors. In the event of a confidentiality incident that poses a risk of serious injury, we will notify affected individuals and the Commission d'accès à l'information du Québec without undue delay, as required by Law 25.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s9h">9. Governing law</h3>
           <p data-i18n="privacy.s9p">This privacy policy is governed by the laws of the Province of Quebec and the federal laws of Canada. Any disputes will be heard in the courts of the District of Montreal, Quebec.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s10h">10. Changes to this policy</h3>
           <p data-i18n="privacy.s10p">We may update this policy from time to time. Material changes will be posted on this page with an updated effective date. For significant changes (new data uses, new categories of processors), we will notify active subscribers by email at least 30 days before they take effect.</p>
         </div>
 
-        <div class="card" style="margin-top:1.5rem;">
+        <div class="card" data-reveal style="margin-top:1.5rem;">
           <h3 data-i18n="privacy.s11h">11. Contact the privacy officer</h3>
-          <p data-i18n-html="privacy.s11p">For any question, request, or complaint about your personal information, contact Michael Attia (privacy officer) at <a href="mailto:support@editorsunited.com" style="color:var(--navy); font-weight:600;">support@editorsunited.com</a>.</p>
+          <p data-i18n-html="privacy.s11p">For any question, request, or complaint about your personal information, contact Michael Attia (privacy officer) at <a href="mailto:support@editorsunited.com">support@editorsunited.com</a>.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer grain">
+    <div class="tc-ruler on-dark" aria-hidden="true"></div>
     <div class="container footer-row">
-      <div data-footer-rights>© 2026 EditorsUnited. All rights reserved.</div>
+      <div><span data-footer-rights>© 2026 EditorsUnited. All rights reserved.</span> <span class="footer-eor" aria-hidden="true">— END OF REEL</span></div>
       <div class="footer-links">
-        <a href="index.html" data-i18n="footer.home">Home</a>
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
-        <a href="contact.html" data-i18n="footer.contact">Contact</a>
-        <a href="policies.html" data-i18n="footer.policies">Policies</a>
+        <a href="/" data-i18n="footer.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="footer.contact">Contact</a>
+        <a href="/privacy" data-i18n="footer.privacy">Privacy</a>
+        <a href="/policies" data-i18n="footer.policies">Policies</a>
       </div>
     </div>
+    <div class="footer-leader" aria-hidden="true"></div>
   </footer>
 
-  <script src="assets/translations.js?v=20260425"></script>
-  <script src="assets/translations-auto.js?v=20260425"></script>
-  <script src="assets/site.js?v=20260425"></script>
+  <script src="assets/translations.js?v=20260710"></script>
+  <script src="assets/translations-auto.js?v=20260710"></script>
+  <script src="assets/site.js?v=20260710"></script>
 </body>
 </html>

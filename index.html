@@ -12,14 +12,21 @@
   <meta property="og:title" content="EditorsUnited | Short-Form Video That Fills Your Calendar" />
   <meta property="og:description" content="EditorsUnited edits TikToks, Reels, and Shorts for coaches, advisors, and service pros who want their content to generate booked clients — not just views." />
   <meta property="og:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="fr_CA" />
+  <meta property="og:locale" content="en_CA" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="EditorsUnited | Short-Form Video That Fills Your Calendar" />
   <meta name="twitter:description" content="EditorsUnited edits TikToks, Reels, and Shorts for coaches, advisors, and service pros who want their content to generate booked clients — not just views." />
   <meta name="twitter:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <link rel="stylesheet" href="assets/styles.css?v=20260425" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#0B0D12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260710" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20260710" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,7 +37,7 @@
     "logo": "https://editorsunited.com/assets/logo.svg",
     "image": "https://editorsunited.com/assets/og-image.jpg",
     "email": "support@editorsunited.com",
-    "founder": { "@type": "Person", "name": "Michael A." },
+    "founder": { "@type": "Person", "name": "Michael Attia" },
     "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
     "areaServed": [
       { "@type": "Country", "name": "Canada" },
@@ -38,8 +45,7 @@
     ],
     "availableLanguage": ["English", "French"],
     "priceRange": "$$",
-    "serviceType": "Short-form video editing",
-    "sameAs": []
+    "serviceType": "Short-form video editing"
   }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
@@ -55,37 +61,52 @@
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" style="display:flex;align-items:center;">
-        <img src="assets/logo.svg" alt="EditorsUnited" width="220" height="44" style="display:block;" />
+      <a class="brand" href="/" aria-label="EditorsUnited — Home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="32" height="32" rx="8" fill="#141821" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+          <path d="M8 26h18" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <path d="M8 26v-2.5M13 26v-2.5M22 26v-2.5M26 26v-2.5" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <rect x="16.1" y="13" width="1.8" height="12" fill="#FFC94A"/>
+          <path d="M12 7h10v4l-5 4-5-4z" fill="#FFC94A"/>
+        </svg>
+        <span class="brand-word">Editors<em>United</em></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/" class="active" data-i18n="nav.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+      <span class="header-tc" data-header-tc aria-hidden="true">TC 00:00:00</span>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact#book" data-i18n="nav.cta">Book a call</a>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
+        <button class="lang-btn" data-lang="en" aria-label="Switch to English" data-i18n-aria="a11y.langEn" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Passer au français" aria-pressed="false" lang="fr">FR</button>
       </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero grain">
       <div class="container hero-grid">
         <div>
-          <div class="badge" data-i18n="hero.badge">Turning expertise into booked clients</div>
-          <h1 data-i18n="hero.h1">Short-form video that fills your calendar — not just your feed.</h1>
+          <div class="slate-line"><span class="tc-index" aria-hidden="true">SC 01 · MTL · 30 FPS ·</span><span data-i18n="hero.badge">Turning expertise into booked clients</span></div>
+          <h1 data-i18n-html="hero.h1">Short-form video that <span class="hl">fills your calendar</span> — not just your feed.</h1>
           <p class="lead" data-i18n="hero.lead">We edit TikToks, Reels, and Shorts for coaches, advisors, and service pros who want their content to generate inquiries. Every edit is built around the first three seconds, the retention curve, and the CTA.</p>
-          <div class="hero-proof" aria-label="Client rating">
-            <span class="hero-proof-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <div class="hero-proof" aria-label="Client rating" data-i18n-aria="a11y.clientRating">
+            <span class="hero-proof-stars" aria-hidden="true">★</span>
             <span class="hero-proof-text" data-i18n-html="hero.proof"><strong>4.9</strong> &middot; 50+ client reviews</span>
           </div>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#pricing" data-i18n="hero.cta1">View Packages</a>
-            <a class="btn btn-secondary" href="contact.html#book" data-i18n="hero.cta2">Book a call</a>
+            <a class="btn btn-primary" href="#pricing" data-i18n="hero.cta1">View packages</a>
+            <a class="btn btn-secondary" href="/contact#book" data-i18n="hero.cta2">Book a call</a>
+          </div>
+          <div class="hero-scrub" aria-hidden="true">
+            <div class="tc-ruler on-dark"></div>
+            <div class="hero-scrub-head"></div>
+            <div class="hero-scrub-tc" data-tc-counter>00:00:00:00</div>
           </div>
           <div class="stats">
             <div class="stat"><strong data-i18n="stats.s1title">Hook-first</strong><span data-i18n="stats.s1desc">Edits built to stop the scroll in the first three seconds</span></div>
@@ -93,13 +114,12 @@
             <div class="stat"><strong data-i18n="stats.s3title">Consistent</strong><span data-i18n="stats.s3desc">Monthly packages that keep your posting cadence steady</span></div>
           </div>
         </div>
-        <div class="hero-card">
+        <div class="hero-card io-brackets">
+          <span class="rec-chip" aria-hidden="true">REC</span>
           <div class="hero-video">
-            <div class="lite-youtube" data-yt-id="TpbBaj3n_BM" role="button" tabindex="0" aria-label="Play featured video">
-              <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/TpbBaj3n_BM/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360" />
-              <span class="lite-youtube-play" aria-hidden="true">
-                <svg viewBox="0 0 68 48"><path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.5.7 34 .7 34 .7s-21.5 0-26.6 1c-2.9.8-5.1 3.1-5.9 6C.5 12.8.5 24 .5 24s0 11.2 1 16.3c.8 2.9 3 5.2 5.9 6 5.1 1 26.6 1 26.6 1s21.5 0 26.6-1c2.9-.8 5.1-3.1 5.9-6 1-5.1 1-16.3 1-16.3s0-11.2-1-16.3z" fill="#f00"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
-              </span>
+            <div class="lite-youtube" data-yt-id="TpbBaj3n_BM" role="button" tabindex="0" aria-label="Play featured video" data-i18n-aria="a11y.playWork">
+              <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/TpbBaj3n_BM/hqdefault.jpg" alt="" fetchpriority="high" decoding="async" width="480" height="360" />
+              <span class="lite-youtube-play" aria-hidden="true"><span class="play-chip"></span></span>
             </div>
           </div>
           <div class="hero-note" data-i18n="hero.heroNote">A taste of what we edit every month. Full portfolio linked below.</div>
@@ -107,8 +127,9 @@
       </div>
     </section>
 
-    <section class="section-logos">
-      <div class="logos-label" data-i18n="logos.label">Trusted by creators &amp; businesses across industries</div>
+    <section class="section-logos grain">
+      <div class="tc-ruler on-dark" aria-hidden="true"></div>
+      <div class="logos-label" style="margin-top:1.5rem;"><span class="tc-index" aria-hidden="true">SC 01A · </span><span data-i18n="logos.label">Trusted by creators &amp; businesses across industries</span></div>
       <div class="logos-marquee-wrap">
         <div class="logos-track">
           <!-- set 1 -->
@@ -117,183 +138,181 @@
           <span class="logo-pill"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="Nashville Home Guru" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
           <span class="logo-pill"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="Acura Gabriel West-Island" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
           <span class="logo-pill"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="Finnect" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <!-- set 2 -->
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/DOJQC.webp" alt="DOJQC Roleplay" width="160" height="160" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/logo-pelouse-rsm.svg" alt="Pelouse RSM" width="243" height="129" loading="lazy" decoding="async" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="Nashville Home Guru" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="Acura Gabriel West-Island" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="Finnect" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <!-- set 3 -->
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/DOJQC.webp" alt="DOJQC Roleplay" width="160" height="160" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/logo-pelouse-rsm.svg" alt="Pelouse RSM" width="243" height="129" loading="lazy" decoding="async" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="Nashville Home Guru" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="Acura Gabriel West-Island" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="Finnect" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <!-- set 4 -->
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/DOJQC.webp" alt="DOJQC Roleplay" width="160" height="160" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/logo-pelouse-rsm.svg" alt="Pelouse RSM" width="243" height="129" loading="lazy" decoding="async" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="Nashville Home Guru" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="Acura Gabriel West-Island" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
-          <span class="logo-pill"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="Finnect" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <!-- duplicate sets for the marquee loop (hidden from AT) -->
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/DOJQC.webp" alt="" width="160" height="160" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/logo-pelouse-rsm.svg" alt="" width="243" height="129" loading="lazy" decoding="async" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/DOJQC.webp" alt="" width="160" height="160" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/logo-pelouse-rsm.svg" alt="" width="243" height="129" loading="lazy" decoding="async" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/DOJQC.webp" alt="" width="160" height="160" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/logo-pelouse-rsm.svg" alt="" width="243" height="129" loading="lazy" decoding="async" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/nashville-home-guru.webp" alt="" width="320" height="134" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/acura-gabriel.webp" alt="" width="250" height="87" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
+          <span class="logo-pill" aria-hidden="true"><img class="logo-img" src="assets/logos/White-Logo.webp" alt="" width="320" height="107" loading="lazy" decoding="async" onerror="this.closest('.logo-pill').classList.add('logo-missing')" /></span>
         </div>
       </div>
+      <div class="tc-ruler on-dark" style="margin-top:1.5rem;" aria-hidden="true"></div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section">
       <div class="container">
-        <div class="section-kicker" data-i18n="whatwedo.kicker">What we do</div>
-        <h2 data-i18n="whatwedo.h2">Edits built to turn your expertise into booked clients.</h2>
-        <p class="section-intro" data-i18n="whatwedo.intro">Coaches, advisors, and service pros don't need more views — they need the right viewer to book a call. Every edit we deliver is engineered for that outcome.</p>
-        <div class="grid-3" style="margin-top: 2rem;">
-          <article class="card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <circle cx="12" cy="12" r="6"/>
-                <circle cx="12" cy="12" r="2"/>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 02 · TC 00:00:03 ·</span><span data-i18n="whatwedo.kicker">What we do</span></div>
+        <h2 data-i18n="whatwedo.h2" data-reveal>Edits built to turn your expertise into booked clients.</h2>
+        <p class="section-intro" data-i18n="whatwedo.intro" data-reveal>Coaches, advisors, and service pros don't need more views — they need the right viewer to book a call. Every edit we deliver is engineered for that outcome.</p>
+        <div class="grid-3" style="margin-top: 2rem;" data-reveal-group>
+          <article class="card" data-reveal>
+            <div class="clip-index"><span aria-hidden="true">01</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
               </svg>
             </div>
             <h3 data-i18n="whatwedo.f1title">Hook optimization</h3>
             <p data-i18n="whatwedo.f1desc">We shape the first three seconds so the right prospect stops scrolling — not just anyone.</p>
+            <div class="clip-meta" aria-hidden="true">HOOK · 00:00–00:03</div>
           </article>
-          <article class="card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="20" x2="5" y2="14"/>
-                <line x1="12" y1="20" x2="12" y2="9"/>
-                <line x1="19" y1="20" x2="19" y2="4"/>
+          <article class="card" data-reveal>
+            <div class="clip-index"><span aria-hidden="true">02</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="20" x2="5" y2="14"/><line x1="12" y1="20" x2="12" y2="9"/><line x1="19" y1="20" x2="19" y2="4"/>
               </svg>
             </div>
             <h3 data-i18n="whatwedo.f2title">Retention editing</h3>
             <p data-i18n="whatwedo.f2desc">Captions, pacing, and cut rhythm that keep viewers watching to the pitch.</p>
+            <div class="clip-meta" aria-hidden="true">RETENTION · 00:03–00:45</div>
           </article>
-          <article class="card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <article class="card" data-reveal>
+            <div class="clip-index"><span aria-hidden="true">03</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M3 12l5 5L21 5"/>
               </svg>
             </div>
             <h3 data-i18n="whatwedo.f3title">Client conversion</h3>
             <p data-i18n="whatwedo.f3desc">Offer-led framing and calls to action designed to turn attention into booked calls.</p>
+            <div class="clip-meta" aria-hidden="true">CTA · OUT-POINT</div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-dark grain">
       <div class="container">
-        <div class="section-kicker" data-i18n="portfolioPreview.kicker">Recent work</div>
-        <h2 data-i18n="portfolioPreview.h2">See the edits we deliver every week.</h2>
-        <p class="section-intro" data-i18n="portfolioPreview.intro">A quick sample of the short-form content we produce for coaches, advisors, and service pros.</p>
-        <div class="portfolio-videos" style="margin-top:2.5rem;">
-          <div class="video-short">
-            <div class="lite-youtube" data-yt-id="p_x1v71wDLM" role="button" tabindex="0" aria-label="Play EditorsUnited featured work">
-              <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/p_x1v71wDLM/hqdefault.jpg" alt="EditorsUnited featured work" loading="lazy" width="480" height="360">
-              <div class="lite-youtube-play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 03 · SCREENING ·</span><span data-i18n="portfolioPreview.kicker">Recent work</span></div>
+        <h2 data-i18n="portfolioPreview.h2" data-reveal>See the edits we deliver every week.</h2>
+        <p class="section-intro" data-i18n="portfolioPreview.intro" data-reveal>A quick sample of the short-form content we produce for coaches, advisors, and service pros.</p>
+        <div class="portfolio-videos" style="margin-top:2.5rem;" data-reveal-group>
+          <div data-reveal>
+            <div class="video-short">
+              <div class="lite-youtube" data-yt-id="p_x1v71wDLM" role="button" tabindex="0" aria-label="Play featured edit — clip 1">
+                <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/p_x1v71wDLM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                <span class="lite-youtube-play" aria-hidden="true"><span class="play-chip"></span></span>
+              </div>
             </div>
+            <div class="clip-caption" aria-hidden="true">CLIP 01 · SHORT-FORM</div>
           </div>
-          <div class="video-short">
-            <div class="lite-youtube" data-yt-id="h-SS0uicWho" role="button" tabindex="0" aria-label="Play EditorsUnited featured work">
-              <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/h-SS0uicWho/hqdefault.jpg" alt="EditorsUnited featured work" loading="lazy" width="480" height="360">
-              <div class="lite-youtube-play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+          <div data-reveal>
+            <div class="video-short">
+              <div class="lite-youtube" data-yt-id="h-SS0uicWho" role="button" tabindex="0" aria-label="Play featured edit — clip 2">
+                <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/h-SS0uicWho/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                <span class="lite-youtube-play" aria-hidden="true"><span class="play-chip"></span></span>
+              </div>
             </div>
+            <div class="clip-caption" aria-hidden="true">CLIP 02 · SHORT-FORM</div>
           </div>
-          <div class="video-short">
-            <div class="lite-youtube" data-yt-id="YoaGa0CKOg0" role="button" tabindex="0" aria-label="Play EditorsUnited featured work">
-              <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/YoaGa0CKOg0/hqdefault.jpg" alt="EditorsUnited featured work" loading="lazy" width="480" height="360">
-              <div class="lite-youtube-play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24L27 14v20z" fill="#fff"/></svg></div>
+          <div data-reveal>
+            <div class="video-short">
+              <div class="lite-youtube" data-yt-id="YoaGa0CKOg0" role="button" tabindex="0" aria-label="Play featured edit — clip 3">
+                <img class="lite-youtube-poster" src="https://i.ytimg.com/vi/YoaGa0CKOg0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                <span class="lite-youtube-play" aria-hidden="true"><span class="play-chip"></span></span>
+              </div>
             </div>
+            <div class="clip-caption" aria-hidden="true">CLIP 03 · SHORT-FORM</div>
           </div>
         </div>
-        <div style="text-align:center;margin-top:2rem;">
-          <a class="btn btn-secondary" href="portfolio.html" data-i18n="portfolioPreview.viewAll">See the full portfolio →</a>
+        <div style="text-align:center;margin-top:2.5rem;">
+          <a class="btn btn-secondary" href="/portfolio" data-i18n="portfolioPreview.viewAll">See the full portfolio →</a>
         </div>
       </div>
     </section>
 
     <section class="section section-soft">
       <div class="container">
-        <div class="section-kicker" data-i18n="reviews.kicker">Client reviews</div>
-        <h2 data-i18n="reviews.h2">What our clients are saying.</h2>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 04 · TC 00:00:27 ·</span><span data-i18n="reviews.kicker">Client reviews</span></div>
+        <h2 data-i18n="reviews.h2" data-reveal>What our clients are saying.</h2>
 
-        <div class="reviews-summary">
+        <div class="reviews-summary" data-reveal>
           <div class="reviews-score">4.9</div>
           <div class="reviews-meta">
-            <div class="reviews-stars" data-i18n="reviews.allStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="reviews-stars" aria-hidden="true">★★★★★</div>
             <div class="reviews-count" data-i18n="reviews.countLabel">from 50+ client reviews</div>
           </div>
         </div>
 
-        <div class="reviews-grid">
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-text">"Parfait de A à Z."</p>
+        <figure class="review-pull" data-reveal>
+          <div class="mono-meta" aria-hidden="true">TAKE 01 — ★ 5.0</div>
+          <blockquote>"Always a pleasure to work with Michael — by far one of the best I've worked with in the game."</blockquote>
+          <figcaption>davidhall734 <span><span data-i18n="reviews.verifiedClient">Verified client</span> · 5.0</span></figcaption>
+        </figure>
+
+        <div class="reviews-grid" data-reveal-group>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 02 — </span>★ 5.0</div>
+            <p class="review-text" lang="fr">"Parfait de A à Z."</p>
             <div class="review-author">
               <strong>bobbytanguay</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
+              <svg class="waveform" viewBox="0 0 240 22" preserveAspectRatio="none" aria-hidden="true"><g fill="currentColor"><rect x="0" y="8" width="4" height="6"/><rect x="10" y="4" width="4" height="14"/><rect x="20" y="6.5" width="4" height="9"/><rect x="30" y="2" width="4" height="18"/><rect x="40" y="5" width="4" height="12"/><rect x="50" y="7.5" width="4" height="7"/><rect x="60" y="3" width="4" height="16"/><rect x="70" y="6" width="4" height="10"/><rect x="80" y="1" width="4" height="20"/><rect x="90" y="7" width="4" height="8"/><rect x="100" y="4.5" width="4" height="13"/><rect x="110" y="2.5" width="4" height="17"/><rect x="120" y="8" width="4" height="6"/><rect x="130" y="5.5" width="4" height="11"/><rect x="140" y="1.5" width="4" height="19"/><rect x="150" y="6.5" width="4" height="9"/><rect x="160" y="3.5" width="4" height="15"/><rect x="170" y="7.5" width="4" height="7"/><rect x="180" y="5" width="4" height="12"/><rect x="190" y="2" width="4" height="18"/><rect x="200" y="6" width="4" height="10"/><rect x="210" y="4" width="4" height="14"/><rect x="220" y="7" width="4" height="8"/><rect x="230" y="3" width="4" height="16"/></g></svg>
             </div>
           </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-text">"Travail de grande qualité."</p>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 03 — </span>★ 5.0</div>
+            <p class="review-text" lang="fr">"Travail de grande qualité."</p>
             <div class="review-author">
               <strong>tensal_1031</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
             </div>
           </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 04 — </span>★ 5.0</div>
             <p class="review-text">"Good work. Fast revisions."</p>
             <div class="review-author">
               <strong>apeezy11</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
             </div>
           </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-text">"Merci, qualité au rendez-vous et bonne communication."</p>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 05 — </span>★ 5.0</div>
+            <p class="review-text" lang="fr">"Merci, qualité au rendez-vous et bonne communication."</p>
             <div class="review-author">
               <strong>sam_oopercast</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
             </div>
           </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 06 — </span>★ 5.0</div>
             <p class="review-text">"Great service, went above and beyond my expectations!"</p>
             <div class="review-author">
               <strong>jasonj1818</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
             </div>
           </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 07 — </span>★ 4.7</div>
             <p class="review-text">"Honestly happy with the product."</p>
             <div class="review-author">
               <strong>meltedhand</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 4.7</span>
             </div>
           </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <article class="review-card" data-reveal>
+            <div class="review-card-stars"><span aria-hidden="true">TAKE 08 — </span>★ 5.0</div>
             <p class="review-text">"Awesome job, would highly recommend."</p>
             <div class="review-author">
               <strong>bearz666</strong>
-              <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
-            </div>
-          </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-text">"Always a pleasure to work with Michael — by far one of the best I've worked with in the game."</p>
-            <div class="review-author">
-              <strong>davidhall734</strong>
-              <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
-            </div>
-          </article>
-          <article class="review-card">
-            <div class="review-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-text">"I've used this platform for over 5 years — by far the best experience I've had. Over delivered and response time is exceptional. You will not regret it!"</p>
-            <div class="review-author">
-              <strong>lukedubis</strong>
               <span><span data-i18n="reviews.verifiedClient">Verified client</span> &middot; 5.0</span>
             </div>
           </article>
@@ -301,25 +320,26 @@
       </div>
     </section>
 
-    <section id="pricing" class="section section-soft">
+    <section id="pricing" class="section">
       <div class="container">
-        <div class="section-kicker" data-i18n="pricing.kicker">Pricing</div>
-        <h2 data-i18n="pricing.h2">Simple packages built around the outcome — not just the video count.</h2>
-        <p class="section-intro" data-i18n="pricing.intro">Pick the tier that matches how aggressively you want to grow. Every plan includes hook optimization, caption work, and CTA framing.</p>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 05 · TC 00:00:45 ·</span><span data-i18n="pricing.kicker">Pricing</span></div>
+        <h2 data-i18n="pricing.h2" data-reveal>Simple packages built around the outcome — not just the video count.</h2>
+        <p class="section-intro" data-i18n="pricing.intro" data-reveal>Pick the tier that matches how aggressively you want to grow. Every plan includes hook optimization, caption work, and CTA framing.</p>
         <p class="pricing-lede" data-i18n="pricing.lede">Plans start at $799 CAD/mo · most clients land on Growth.</p>
-        <div class="billing-toggle" role="tablist" aria-label="Billing period">
-          <button class="bill-btn active" data-bill="monthly" type="button" data-i18n="pricing.billMonthly">Monthly</button>
-          <button class="bill-btn" data-bill="annual" type="button" data-i18n="pricing.billAnnual">Annual · save 15%</button>
+        <div class="billing-toggle" role="group" aria-label="Billing period" data-i18n-aria="a11y.billing">
+          <button class="bill-btn active" data-bill="monthly" type="button" aria-pressed="true" data-i18n="pricing.billMonthly">Monthly</button>
+          <button class="bill-btn" data-bill="annual" type="button" aria-pressed="false" data-i18n="pricing.billAnnual">Annual · save 15%</button>
         </div>
-        <p class="pricing-soft-cta" data-i18n-html="pricing.softCta">Not ready to commit? <a href="contact.html#book">Book a free 15-min call →</a></p>
-        <div class="pricing-grid" data-billing="monthly">
-          <article class="price-card">
+        <p class="pricing-offer-note" data-i18n="pricing.offerNote">15% off your first month — applied automatically at checkout.</p>
+        <p class="pricing-soft-cta" data-i18n-html="pricing.softCta">Not ready to commit? <a href="/contact#book">Book a free 15-min call →</a></p>
+        <div class="pricing-grid" data-billing="monthly" data-reveal-group>
+          <article class="price-card" data-reveal>
             <div class="price-name" data-i18n="pricing.starterName">Starter</div>
             <div class="price-tag-wrap">
-              <span class="price-old" data-monthly="" data-annual="$799 CAD">$799 CAD</span>
-              <span class="price-cost"><span class="price-current" data-monthly="$799 CAD" data-annual="$679 CAD">$799 CAD</span><span class="price-period" data-i18n="pricing.perMo">/mo</span></span>
+              <span class="price-old" data-monthly="" data-annual="$799 CAD" data-monthly-fr="" data-annual-fr="799 $ CAD">$799 CAD</span>
+              <span class="price-cost"><span class="price-current" data-monthly="$799 CAD" data-annual="$679 CAD" data-monthly-fr="799 $ CAD" data-annual-fr="679 $ CAD">$799 CAD</span><span class="price-period" data-i18n="pricing.perMo">/mo</span></span>
             </div>
-            <div class="price-volume"><strong class="price-lead-amount" data-monthly="$114" data-annual="$97">$114</strong><span data-i18n="pricing.perVideoLabel">per video</span></div>
+            <div class="price-volume"><strong class="price-lead-amount" data-monthly="$114" data-annual="$97" data-monthly-fr="114 $" data-annual-fr="97 $">$114</strong><span data-i18n="pricing.perVideoLabel">per video</span></div>
             <div class="price-per" data-bill-key="pricing.starterPer" data-i18n="pricing.starterPer">7 videos / month · ~$27/day</div>
             <p data-i18n="pricing.starterDesc">A low-risk way to test short-form for your business before scaling up.</p>
             <ul>
@@ -327,17 +347,17 @@
               <li data-i18n="pricing.starterLi3">1 revision round per video</li>
               <li data-i18n="pricing.starterLi4">Hook &amp; caption optimization</li>
             </ul>
-            <div class="cta-row"><a class="btn btn-primary btn-block" data-cta-monthly="https://buy.stripe.com/7sY14o4SLeRW0Z0eZT2Nq0w?prefilled_promo_code=Start15" data-cta-annual="https://buy.stripe.com/8x24gA1Gz4didLM7xr2Nq0x?prefilled_promo_code=Start15" href="https://buy.stripe.com/7sY14o4SLeRW0Z0eZT2Nq0w?prefilled_promo_code=Start15" target="_blank" rel="noopener" data-i18n="pricing.starterBtn">Subscribe</a></div>
+            <div class="cta-row"><a class="btn btn-primary btn-block" data-cta-monthly="https://buy.stripe.com/7sY14o4SLeRW0Z0eZT2Nq0w?prefilled_promo_code=Start15" data-cta-annual="https://buy.stripe.com/8x24gA1Gz4didLM7xr2Nq0x" href="https://buy.stripe.com/7sY14o4SLeRW0Z0eZT2Nq0w?prefilled_promo_code=Start15" target="_blank" rel="noopener" data-i18n="pricing.starterBtn">Subscribe</a></div>
           </article>
-          <article class="price-card featured">
+          <article class="price-card featured io-brackets" data-reveal>
             <div class="price-badge" data-i18n="pricing.growthBadge">Best value · Most popular</div>
             <div class="price-name" data-i18n="pricing.growthName">Growth</div>
             <div class="price-tag-wrap">
-              <span class="price-old" data-monthly="" data-annual="$1,499 CAD">$1,499 CAD</span>
-              <span class="price-cost"><span class="price-current" data-monthly="$1,499 CAD" data-annual="$1,274 CAD">$1,499 CAD</span><span class="price-period" data-i18n="pricing.perMo">/mo</span></span>
+              <span class="price-old" data-monthly="" data-annual="$1,499 CAD" data-monthly-fr="" data-annual-fr="1 499 $ CAD">$1,499 CAD</span>
+              <span class="price-cost"><span class="price-current" data-monthly="$1,499 CAD" data-annual="$1,274 CAD" data-monthly-fr="1 499 $ CAD" data-annual-fr="1 274 $ CAD">$1,499 CAD</span><span class="price-period" data-i18n="pricing.perMo">/mo</span></span>
             </div>
-            <div class="price-volume"><strong class="price-lead-amount" data-monthly="$100" data-annual="$85">$100</strong><span data-i18n="pricing.perVideoLabel">per video</span></div>
-            <div class="price-per" data-bill-key="pricing.growthPer" data-i18n="pricing.growthPer">15 videos / month · ~$50/day · save $211/mo vs Starter</div>
+            <div class="price-volume"><strong class="price-lead-amount" data-monthly="$100" data-annual="$85" data-monthly-fr="100 $" data-annual-fr="85 $">$100</strong><span data-i18n="pricing.perVideoLabel">per video</span></div>
+            <div class="price-per" data-bill-key="pricing.growthPer" data-i18n="pricing.growthPer">15 videos / month · ~$50/day · save ~$213/mo vs Starter</div>
             <p data-i18n="pricing.growthDesc">Built for coaches, advisors, and service pros who want their content to generate qualified inquiries.</p>
             <ul>
               <li data-i18n="pricing.growthLi1">Dedicated video editor</li>
@@ -346,16 +366,16 @@
               <li data-i18n="pricing.growthLi4">Monthly strategy call</li>
               <li data-i18n="pricing.growthLi5">Hook, caption &amp; CTA framing</li>
             </ul>
-            <div class="cta-row"><a class="btn btn-primary btn-block" data-cta-monthly="https://buy.stripe.com/cNiaEY0CvaBGbDE6tn2Nq0y?prefilled_promo_code=Start15" data-cta-annual="https://buy.stripe.com/4gM14oetl1166jk4lf2Nq0z?prefilled_promo_code=Start15" href="https://buy.stripe.com/cNiaEY0CvaBGbDE6tn2Nq0y?prefilled_promo_code=Start15" target="_blank" rel="noopener" data-i18n="pricing.growthBtn">Subscribe</a></div>
+            <div class="cta-row"><a class="btn btn-primary btn-block" data-cta-monthly="https://buy.stripe.com/cNiaEY0CvaBGbDE6tn2Nq0y?prefilled_promo_code=Start15" data-cta-annual="https://buy.stripe.com/4gM14oetl1166jk4lf2Nq0z" href="https://buy.stripe.com/cNiaEY0CvaBGbDE6tn2Nq0y?prefilled_promo_code=Start15" target="_blank" rel="noopener" data-i18n="pricing.growthBtn">Subscribe</a></div>
           </article>
-          <article class="price-card">
+          <article class="price-card" data-reveal>
             <div class="price-name" data-i18n="pricing.scaleName">Scale</div>
             <div class="price-tag-wrap">
-              <span class="price-old" data-monthly="" data-annual="$2,699 CAD">$2,699 CAD</span>
-              <span class="price-cost"><span class="price-current" data-monthly="$2,699 CAD" data-annual="$2,294 CAD">$2,699 CAD</span><span class="price-period" data-i18n="pricing.perMo">/mo</span></span>
+              <span class="price-old" data-monthly="" data-annual="$2,699 CAD" data-monthly-fr="" data-annual-fr="2 699 $ CAD">$2,699 CAD</span>
+              <span class="price-cost"><span class="price-current" data-monthly="$2,699 CAD" data-annual="$2,294 CAD" data-monthly-fr="2 699 $ CAD" data-annual-fr="2 294 $ CAD">$2,699 CAD</span><span class="price-period" data-i18n="pricing.perMo">/mo</span></span>
             </div>
-            <div class="price-volume"><strong class="price-lead-amount" data-monthly="$90" data-annual="$76">$90</strong><span data-i18n="pricing.perVideoLabel">per video</span></div>
-            <div class="price-per" data-bill-key="pricing.scalePer" data-i18n="pricing.scalePer">30 videos / month · ~$90/day</div>
+            <div class="price-volume"><strong class="price-lead-amount" data-monthly="$90" data-annual="$76" data-monthly-fr="90 $" data-annual-fr="76 $">$90</strong><span data-i18n="pricing.perVideoLabel">per video</span></div>
+            <div class="price-per" data-bill-key="pricing.scalePer" data-i18n="pricing.scalePer">30 videos / month · ~$90/day · save ~$301/mo vs Growth</div>
             <p data-i18n="pricing.scaleDesc">For experts posting daily who want a dedicated editor and the fastest turnaround across every platform.</p>
             <ul>
               <li data-i18n="pricing.scaleLi2">48-hour turnaround</li>
@@ -363,10 +383,10 @@
               <li data-i18n="pricing.scaleLi4">Bi-weekly strategy call</li>
               <li data-i18n="pricing.scaleLi5">Dedicated editor + project manager</li>
             </ul>
-            <div class="cta-row"><a class="btn btn-primary btn-block" data-cta-monthly="https://buy.stripe.com/14A7sMbh9eRWfTU6tn2Nq0A?prefilled_promo_code=Start15" data-cta-annual="https://buy.stripe.com/9B65kE0CvfW0234aJD2Nq0B?prefilled_promo_code=Start15" href="https://buy.stripe.com/14A7sMbh9eRWfTU6tn2Nq0A?prefilled_promo_code=Start15" target="_blank" rel="noopener" data-i18n="pricing.scaleBtn">Subscribe</a></div>
+            <div class="cta-row"><a class="btn btn-primary btn-block" data-cta-monthly="https://buy.stripe.com/14A7sMbh9eRWfTU6tn2Nq0A?prefilled_promo_code=Start15" data-cta-annual="https://buy.stripe.com/9B65kE0CvfW0234aJD2Nq0B" href="https://buy.stripe.com/14A7sMbh9eRWfTU6tn2Nq0A?prefilled_promo_code=Start15" target="_blank" rel="noopener" data-i18n="pricing.scaleBtn">Subscribe</a></div>
           </article>
         </div>
-        <div class="band">
+        <div class="band" data-reveal>
           <div>
             <strong data-i18n="pricing.bandTitle">Need higher volume or a custom setup?</strong>
             <div class="small-note" data-i18n="pricing.bandNote">Ask about annual billing (save 15%), multi-brand workflows, or custom packages built around your launch calendar.</div>
@@ -376,10 +396,10 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-dark">
+    <section id="contact" class="section section-dark grain">
       <div class="container contact-layout">
-        <div class="contact-side">
-          <div class="section-kicker" data-i18n="contactSection.kicker">Contact</div>
+        <div class="contact-side" data-reveal>
+          <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 06 · TC 00:00:58 ·</span><span data-i18n="contactSection.kicker">Contact</span></div>
           <h2 data-i18n="contactSection.h2">Let's build something that actually grows your brand.</h2>
           <p data-i18n="contactSection.p">Fill out the form and we'll get back to you within 24 hours. Whether you're a creator, coach, or business — if you're serious about growing on short-form video, we want to hear from you.</p>
           <ul>
@@ -389,7 +409,11 @@
           </ul>
           <p class="small-note"><a class="eyebrow-link" href="#pricing" data-i18n="contactSection.linkText">View our packages →</a></p>
         </div>
-        <div class="form-shell">
+        <div class="form-shell" data-reveal>
+          <div class="form-head">
+            <span class="form-head-title" data-i18n="contactSection.formTitle">New project — brief us</span>
+            <span class="form-head-chip" data-i18n="contactSection.formChip">Response &lt; 24h</span>
+          </div>
           <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="727e79a3-15c6-45dc-827c-8b836f81c691" />
             <input type="hidden" name="subject" value="New inquiry — EditorsUnited website" />
@@ -411,31 +435,35 @@
               <textarea id="goals" name="goals" placeholder="What are you trying to achieve with your content?" data-i18n-ph="form.goalsPH" required></textarea>
             </div>
             <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-            <div class="form-success" data-success hidden data-i18n="form.success">✓ Got it! We'll be in touch within 24 hours.</div>
-            <div class="form-error" data-error hidden data-i18n="form.error">Something went wrong. Please try again or email us directly.</div>
-            <button class="btn btn-light" type="submit" data-submit-btn data-i18n="form.submit">Submit inquiry</button>
+            <p class="form-privacy-note" data-i18n-html="form.privacyNote">We only use your info to reply — see our <a href="/privacy">privacy policy</a>.</p>
+            <div class="form-success" data-success hidden role="status" data-i18n="form.success">✓ Got it! We'll be in touch within 24 hours.</div>
+            <div class="form-error" data-error hidden role="alert" data-i18n-html="form.error">Something went wrong. Please try again or email us at <a href="mailto:support@editorsunited.com">support@editorsunited.com</a>.</div>
+            <button class="btn btn-primary" type="submit" data-submit-btn data-i18n="form.submit">Submit inquiry</button>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer grain">
+    <div class="tc-ruler on-dark" aria-hidden="true"></div>
     <div class="container footer-row">
-      <div data-footer-rights>© 2026 EditorsUnited. All rights reserved.</div>
+      <div><span data-footer-rights>© 2026 EditorsUnited. All rights reserved.</span> <span class="footer-eor" aria-hidden="true">— END OF REEL</span></div>
       <div class="footer-links">
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
-
-        <a href="contact.html" data-i18n="footer.contact">Contact</a>
-        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
-        <a href="policies.html" data-i18n="footer.policies">Policies</a>
+        <a href="/" data-i18n="footer.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="footer.contact">Contact</a>
+        <a href="/privacy" data-i18n="footer.privacy">Privacy</a>
+        <a href="/policies" data-i18n="footer.policies">Policies</a>
       </div>
     </div>
+    <div class="footer-leader" aria-hidden="true"></div>
   </footer>
 
-  <script src="assets/translations.js?v=20260425"></script>
-  <script src="assets/translations-auto.js?v=20260425"></script>
-  <script src="assets/site.js?v=20260425"></script>
+  <script src="assets/translations.js?v=20260710"></script>
+  <script src="assets/translations-auto.js?v=20260710"></script>
+  <script src="assets/site.js?v=20260710"></script>
 </body>
 </html>

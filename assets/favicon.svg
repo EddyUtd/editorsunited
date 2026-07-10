@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#0a2558"/>
-  <text x="16" y="23" text-anchor="middle" fill="#ffffff" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="13" letter-spacing="-0.5">EU</text>
+  <rect width="32" height="32" rx="8" fill="#0B0D12"/>
+  <path d="M7 24.5h18" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+  <path d="M7 24.5V22M12 24.5V22M20 24.5V22M25 24.5V22" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+  <rect x="15.1" y="11.5" width="1.8" height="11.5" fill="#FFC94A"/>
+  <path d="M11 5.5h10v4l-5 4-5-4z" fill="#FFC94A"/>
 </svg>

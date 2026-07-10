@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — Our Process | EditorsUnited</title>
   <meta name="description" content="Behind the scenes at EditorsUnited — how we turn your expertise into booked clients. From onboarding to scripting, viral editing, and distribution." />
-  <link rel="canonical" href="https://editorsunited.com/services.html" />
+  <link rel="canonical" href="https://editorsunited.com/services" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="EditorsUnited" />
-  <meta property="og:url" content="https://editorsunited.com/services.html" />
+  <meta property="og:url" content="https://editorsunited.com/services" />
   <meta property="og:title" content="Services — Our Process | EditorsUnited" />
   <meta property="og:description" content="Behind the scenes at EditorsUnited — how we turn your expertise into booked clients. From onboarding to scripting, viral editing, and distribution." />
   <meta property="og:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="fr_CA" />
+  <meta property="og:locale" content="en_CA" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Services — Our Process | EditorsUnited" />
   <meta name="twitter:description" content="Behind the scenes at EditorsUnited — how we turn your expertise into booked clients. From onboarding to scripting, viral editing, and distribution." />
   <meta name="twitter:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <link rel="stylesheet" href="assets/styles.css?v=20260425" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#0B0D12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260710" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20260710" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script>document.documentElement.classList.add('js');</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,40 +39,50 @@
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" style="display:flex;align-items:center;">
-        <img src="assets/logo.svg" alt="EditorsUnited" width="220" height="44" style="display:block;" />
+      <a class="brand" href="/" aria-label="EditorsUnited — Home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="32" height="32" rx="8" fill="#141821" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+          <path d="M8 26h18" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <path d="M8 26v-2.5M13 26v-2.5M22 26v-2.5M26 26v-2.5" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <rect x="16.1" y="13" width="1.8" height="12" fill="#FFC94A"/>
+          <path d="M12 7h10v4l-5 4-5-4z" fill="#FFC94A"/>
+        </svg>
+        <span class="brand-word">Editors<em>United</em></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" class="active" data-i18n="nav.services">Services</a>
-        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" class="active" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+      <span class="header-tc" data-header-tc aria-hidden="true">TC 00:00:00</span>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact#book" data-i18n="nav.cta">Book a call</a>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
+        <button class="lang-btn" data-lang="en" aria-label="Switch to English" data-i18n-aria="a11y.langEn" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Passer au français" aria-pressed="false" lang="fr">FR</button>
       </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
-    <section class="section section-dark" style="padding-bottom: 4rem;">
+    <section class="section section-dark grain" style="padding-bottom: 4rem;">
       <div class="container centered-copy">
-        <div class="section-kicker" data-i18n="services.kicker">Behind the scenes</div>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 01 ·</span><span data-i18n="services.kicker">Behind the scenes</span></div>
         <h1 data-i18n="services.h1">How we turn your expertise into booked clients.</h1>
         <p class="lead" data-i18n="services.lead">Most editors stop at clean cuts. We run a full funnel — from the first strategy call to the CTA that gets someone to book. Here's exactly what happens inside every package.</p>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section">
       <div class="container">
-        <div class="section-kicker" data-i18n="services.funnelKicker">The full funnel</div>
-        <h2 data-i18n="services.funnelH2">Four steps, one outcome: qualified inquiries in your inbox.</h2>
-        <p class="section-intro" data-i18n="services.funnelIntro">Every client moves through the same four stages. Each one is engineered for a specific outcome, so nothing about your content is left to guesswork.</p>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 02 ·</span><span data-i18n="services.funnelKicker">The full funnel</span></div>
+        <h2 data-i18n="services.funnelH2" data-reveal>Four steps, one outcome: qualified inquiries in your inbox.</h2>
+        <p class="section-intro" data-i18n="services.funnelIntro" data-reveal>Every client moves through the same four stages. Each one is engineered for a specific outcome, so nothing about your content is left to guesswork.</p>
 
-        <div class="services-timeline">
-          <article class="timeline-step">
+        <div class="services-timeline" data-reveal-group>
+          <article class="timeline-step" data-reveal>
             <div class="step-num">01</div>
             <div class="timeline-content">
               <div class="timeline-outcome" data-i18n="services.s1Outcome">→ A clear brief, ready for production</div>
@@ -80,7 +96,7 @@
             </div>
           </article>
 
-          <article class="timeline-step">
+          <article class="timeline-step" data-reveal>
             <div class="step-num">02</div>
             <div class="timeline-content">
               <div class="timeline-outcome" data-i18n="services.s2Outcome">→ Scripts engineered for retention</div>
@@ -94,7 +110,7 @@
             </div>
           </article>
 
-          <article class="timeline-step">
+          <article class="timeline-step" data-reveal>
             <div class="step-num">03</div>
             <div class="timeline-content">
               <div class="timeline-outcome" data-i18n="services.s3Outcome">→ Videos built to convert, not just play</div>
@@ -108,7 +124,7 @@
             </div>
           </article>
 
-          <article class="timeline-step">
+          <article class="timeline-step" data-reveal>
             <div class="step-num">04</div>
             <div class="timeline-content">
               <div class="timeline-outcome" data-i18n="services.s4Outcome">→ Qualified inquiries in your inbox</div>
@@ -125,34 +141,34 @@
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section section-dark grain">
       <div class="container">
-        <div class="section-kicker" data-i18n="services.viralKicker">What makes a video go viral</div>
-        <h2 data-i18n="services.viralH2">It isn't luck. It's three levers, pulled together.</h2>
-        <p class="section-intro" data-i18n="services.viralIntro">Every video we deliver is built around these three principles. Get all three right and the algorithm rewards you — miss one and the best edit in the world still dies in the feed.</p>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 03 ·</span><span data-i18n="services.viralKicker">What makes a video go viral</span></div>
+        <h2 data-i18n="services.viralH2" data-reveal>It isn't luck. It's three levers, pulled together.</h2>
+        <p class="section-intro" data-i18n="services.viralIntro" data-reveal>Every video we deliver is built around these three principles. Get all three right and the algorithm rewards you — miss one and the best edit in the world still dies in the feed.</p>
 
-        <div class="about-pillars">
-          <article class="card">
-            <div class="feature-icon feature-glyph" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="about-pillars" data-reveal-group>
+          <article class="card" data-reveal>
+            <div class="clip-index"><span aria-hidden="true">01</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
               </svg>
             </div>
             <h3 data-i18n="services.v1Title">A hook that earns the next second</h3>
             <p data-i18n="services.v1Desc">People decide in under 3 seconds whether to keep watching. The hook is a promise: of a payoff, a tension, a reveal. We write and test hooks that speak directly to the viewer who can actually buy from you — not just anyone scrolling.</p>
           </article>
-          <article class="card">
-            <div class="feature-icon feature-glyph" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <article class="card" data-reveal>
+            <div class="clip-index"><span aria-hidden="true">02</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="3 12 7 12 9 6 13 18 15 12 21 12"/>
               </svg>
             </div>
             <h3 data-i18n="services.v2Title">A retention curve that holds to the end</h3>
             <p data-i18n="services.v2Desc">Platforms reward completion rate above almost anything else. Every cut, caption, and sound choice is placed so the viewer never finds a reason to swipe. Pacing, pattern interrupts, and visual rhythm are engineered — not improvised.</p>
           </article>
-          <article class="card">
-            <div class="feature-icon feature-glyph" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <article class="card" data-reveal>
+            <div class="clip-index"><span aria-hidden="true">03</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="11 8 15 12 11 16"/>
                 <line x1="7" y1="12" x2="15" y2="12"/>
@@ -167,33 +183,36 @@
 
     <section class="section section-soft section-tight">
       <div class="container centered-copy">
-        <div class="section-kicker" data-i18n="services.ctaKicker">Ready to see it in action?</div>
-        <h2 data-i18n="services.ctaH2">This is the exact process behind every package.</h2>
-        <p class="section-intro" data-i18n="services.ctaIntro">Pick the tier that matches your growth pace, or book a free 15-minute call to figure out the right fit for your business.</p>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 04 ·</span><span data-i18n="services.ctaKicker">Ready to see it in action?</span></div>
+        <h2 data-i18n="services.ctaH2" data-reveal>This is the exact process behind every package.</h2>
+        <p class="section-intro" data-i18n="services.ctaIntro" data-reveal>Pick the tier that matches your growth pace, or book a free 15-minute call to figure out the right fit for your business.</p>
         <div class="cta-row centered-row">
-          <a class="btn btn-primary" href="index.html#pricing" data-i18n="services.ctaBtn1">View packages</a>
-          <a class="btn btn-secondary" href="contact.html#book" data-i18n="services.ctaBtn2">Book a call</a>
+          <a class="btn btn-primary" href="/#pricing" data-i18n="services.ctaBtn1">View packages</a>
+          <a class="btn btn-secondary" href="/contact#book" data-i18n="services.ctaBtn2">Book a call</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer grain">
+    <div class="tc-ruler on-dark" aria-hidden="true"></div>
     <div class="container footer-row">
-      <div data-footer-rights>© 2026 EditorsUnited. All rights reserved.</div>
+      <div><span data-footer-rights>© 2026 EditorsUnited. All rights reserved.</span> <span class="footer-eor" aria-hidden="true">— END OF REEL</span></div>
       <div class="footer-links">
-        <a href="index.html" data-i18n="footer.home">Home</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
-        <a href="contact.html" data-i18n="footer.contact">Contact</a>
-        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
-        <a href="policies.html" data-i18n="footer.policies">Policies</a>
+        <a href="/" data-i18n="footer.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="footer.contact">Contact</a>
+        <a href="/privacy" data-i18n="footer.privacy">Privacy</a>
+        <a href="/policies" data-i18n="footer.policies">Policies</a>
       </div>
     </div>
+    <div class="footer-leader" aria-hidden="true"></div>
   </footer>
 
-  <script src="assets/translations.js?v=20260425"></script>
-  <script src="assets/translations-auto.js?v=20260425"></script>
-  <script src="assets/site.js?v=20260425"></script>
+  <script src="assets/translations.js?v=20260710"></script>
+  <script src="assets/translations-auto.js?v=20260710"></script>
+  <script src="assets/site.js?v=20260710"></script>
 </body>
 </html>

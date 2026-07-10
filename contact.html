@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | EditorsUnited</title>
   <meta name="description" content="Contact EditorsUnited to talk about short-form editing, content strategy, and the right package for your brand." />
-  <link rel="canonical" href="https://editorsunited.com/contact.html" />
+  <link rel="canonical" href="https://editorsunited.com/contact" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="EditorsUnited" />
-  <meta property="og:url" content="https://editorsunited.com/contact.html" />
+  <meta property="og:url" content="https://editorsunited.com/contact" />
   <meta property="og:title" content="Contact | EditorsUnited" />
   <meta property="og:description" content="Contact EditorsUnited to talk about short-form editing, content strategy, and the right package for your brand." />
   <meta property="og:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="fr_CA" />
+  <meta property="og:locale" content="en_CA" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact | EditorsUnited" />
   <meta name="twitter:description" content="Contact EditorsUnited to talk about short-form editing, content strategy, and the right package for your brand." />
   <meta name="twitter:image" content="https://editorsunited.com/assets/og-image.jpg" />
-  <link rel="stylesheet" href="assets/styles.css?v=20260425" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#0B0D12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260710" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20260710" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <script>document.documentElement.classList.add('js');</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,48 +39,62 @@
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" style="display:flex;align-items:center;">
-        <img src="assets/logo.svg" alt="EditorsUnited" width="220" height="44" style="display:block;" />
+      <a class="brand" href="/" aria-label="EditorsUnited — Home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="32" height="32" rx="8" fill="#141821" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+          <path d="M8 26h18" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <path d="M8 26v-2.5M13 26v-2.5M22 26v-2.5M26 26v-2.5" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <rect x="16.1" y="13" width="1.8" height="12" fill="#FFC94A"/>
+          <path d="M12 7h10v4l-5 4-5-4z" fill="#FFC94A"/>
+        </svg>
+        <span class="brand-word">Editors<em>United</em></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="/contact" class="active" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+      <span class="header-tc" data-header-tc aria-hidden="true">TC 00:00:00</span>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact#book" data-i18n="nav.cta">Book a call</a>
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="a11y.language">
+        <button class="lang-btn" data-lang="en" aria-label="Switch to English" data-i18n-aria="a11y.langEn" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Passer au français" aria-pressed="false" lang="fr">FR</button>
       </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
-    <section class="section section-soft calendly-section">
+    <section id="book" class="section section-soft calendly-section">
       <div class="container">
-        <div class="section-kicker" data-i18n="contactSection.bookKicker">Book a call</div>
-        <h2 data-i18n="contactSection.bookH2">Pick a time that works for you.</h2>
-        <p class="section-intro" data-i18n="contactSection.bookIntro">Choose a slot and we'll talk about your content goals, the right package, and how we work together.</p>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/editorsunited/1-on-1-meeting-with-editorsunited-ltd" style="min-width:320px;height:700px;margin-top:2rem;border-radius:24px;overflow:hidden;"></div>
+        <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 01 ·</span><span data-i18n="contactSection.bookKicker">Book a call</span></div>
+        <h1 data-i18n="contactSection.bookH2" data-reveal>Pick a time that works for you.</h1>
+        <p class="section-intro" data-i18n="contactSection.bookIntro" data-reveal>Choose a slot and we'll talk about your content goals, the right package, and how we work together.</p>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/editorsunited/1-on-1-meeting-with-editorsunited-ltd" style="min-width:320px;height:700px;margin-top:2rem;border-radius:16px;overflow:hidden;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section section-dark grain">
       <div class="container contact-layout">
-        <div class="contact-side">
-          <div class="section-kicker" data-i18n="contactSection.kicker">Contact</div>
-          <h1 data-i18n="contactSection.h2">Let's build something that actually grows your brand.</h1>
+        <div class="contact-side" data-reveal>
+          <div class="tc-label" data-reveal><span class="tc-index" aria-hidden="true">SC 02 ·</span><span data-i18n="contactSection.kicker">Contact</span></div>
+          <h2 data-i18n="contactSection.h2" data-reveal>Let's build something that actually grows your brand.</h2>
           <p data-i18n="contactSection.p">Fill out the form and we'll get back to you within 24 hours. Whether you're a creator, coach, or business — if you're serious about growing on short-form video, we want to hear from you.</p>
           <ul>
             <li data-i18n="contactSection.li1">Tell us about your content goals</li>
             <li data-i18n="contactSection.li2">We'll recommend the right package for you</li>
             <li data-i18n="contactSection.li3">No commitment required to reach out</li>
           </ul>
-          <p class="small-note"><a class="eyebrow-link" href="index.html#pricing" data-i18n="contactSection.linkText">View our packages →</a></p>
+          <p class="small-note"><a class="eyebrow-link" href="/#pricing" data-i18n="contactSection.linkText">View our packages →</a></p>
         </div>
-        <div class="form-shell">
+        <div class="form-shell" data-reveal>
+          <div class="form-head">
+            <span class="form-head-title" data-i18n="contactSection.formTitle">New project — brief us</span>
+            <span class="form-head-chip" data-i18n="contactSection.formChip">Response &lt; 24h</span>
+          </div>
           <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="727e79a3-15c6-45dc-827c-8b836f81c691" />
             <input type="hidden" name="subject" value="New inquiry — EditorsUnited contact page" />
@@ -96,30 +116,35 @@
               <textarea id="contact-goals" name="goals" placeholder="Tell us about your goals, posting frequency, and what kind of leads you want." data-i18n-ph="form.goalsPH" required></textarea>
             </div>
             <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-            <div class="form-success" data-success hidden data-i18n="form.success">✓ Got it! We'll be in touch within 24 hours.</div>
-            <div class="form-error" data-error hidden data-i18n="form.error">Something went wrong. Please try again or email us directly.</div>
-            <button class="btn btn-light" type="submit" data-submit-btn data-i18n="form.submit">Submit inquiry</button>
+            <p class="form-privacy-note" data-i18n-html="form.privacyNote">We only use your info to reply — see our <a href="/privacy">privacy policy</a>.</p>
+            <div class="form-success" data-success hidden role="status" data-i18n="form.success">✓ Got it! We'll be in touch within 24 hours.</div>
+            <div class="form-error" data-error hidden role="alert" data-i18n-html="form.error">Something went wrong. Please try again or email us at <a href="mailto:support@editorsunited.com">support@editorsunited.com</a>.</div>
+            <button class="btn btn-primary" type="submit" data-submit-btn data-i18n="form.submit">Submit inquiry</button>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer grain">
+    <div class="tc-ruler on-dark" aria-hidden="true"></div>
     <div class="container footer-row">
-      <div data-footer-rights>© 2026 EditorsUnited. All rights reserved.</div>
+      <div><span data-footer-rights>© 2026 EditorsUnited. All rights reserved.</span> <span class="footer-eor" aria-hidden="true">— END OF REEL</span></div>
       <div class="footer-links">
-        <a href="index.html" data-i18n="footer.home">Home</a>
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="portfolio.html" data-i18n="footer.portfolio">Portfolio</a>
-        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
-        <a href="policies.html" data-i18n="footer.policies">Policies</a>
+        <a href="/" data-i18n="footer.home">Home</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+        <a href="/services" data-i18n="nav.services">Services</a>
+        <a href="/portfolio" data-i18n="footer.portfolio">Portfolio</a>
+        <a href="/contact" data-i18n="footer.contact">Contact</a>
+        <a href="/privacy" data-i18n="footer.privacy">Privacy</a>
+        <a href="/policies" data-i18n="footer.policies">Policies</a>
       </div>
     </div>
+    <div class="footer-leader" aria-hidden="true"></div>
   </footer>
 
-  <script src="assets/translations.js?v=20260425"></script>
-  <script src="assets/translations-auto.js?v=20260425"></script>
-  <script src="assets/site.js?v=20260425"></script>
+  <script src="assets/translations.js?v=20260710"></script>
+  <script src="assets/translations-auto.js?v=20260710"></script>
+  <script src="assets/site.js?v=20260710"></script>
 </body>
 </html>
