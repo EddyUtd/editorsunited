@@ -1542,7 +1542,6 @@ textarea.field-error {
 .form-privacy-note a { text-decoration: underline; text-underline-offset: 2px; }
 .form-privacy-note a:hover { color: var(--signal-deep); }
 
-.cf-turnstile { margin-top: 0.25rem; }
 
 /* ============================================================
    FOOTER — end of reel (stays dark for grounding)

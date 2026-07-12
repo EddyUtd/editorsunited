@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setupLiteYouTube();
-  setupLazyTurnstile();
   setupCalendlyTracking();
   setupBookCallTracking();
   setupCookieBanner();
@@ -150,26 +149,6 @@ function grantAnalyticsConsent() {
   if (typeof window.gtag === 'function') {
     window.gtag('consent', 'update', { analytics_storage: 'granted' });
   }
-}
-
-function setupLazyTurnstile() {
-  const widgets = document.querySelectorAll('.cf-turnstile');
-  if (!widgets.length) return;
-  let loaded = false;
-  const load = () => {
-    if (loaded) return;
-    loaded = true;
-    const s = document.createElement('script');
-    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-    s.async = true;
-    s.defer = true;
-    document.head.appendChild(s);
-  };
-  if (!('IntersectionObserver' in window)) { load(); return; }
-  const io = new IntersectionObserver((entries) => {
-    if (entries.some((e) => e.isIntersecting)) { load(); io.disconnect(); }
-  }, { rootMargin: '600px' });
-  widgets.forEach((w) => io.observe(w));
 }
 
 /* ── Billing toggle ── */
