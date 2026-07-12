@@ -284,6 +284,8 @@ function setupForm(form) {
     successEl.hidden = true;
     errorEl.hidden = true;
 
+    mirrorLeadToCrm(form, lang);
+
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -317,6 +319,32 @@ function setupForm(form) {
       field.removeAttribute('aria-invalid');
     });
   });
+}
+
+/* Mirror the lead into the EditorsUnited CRM. Fire-and-forget: the user-facing
+   submission flow is Web3Forms; if the portal is unreachable this must never
+   affect the UX (and the lead still arrives by email). */
+function mirrorLeadToCrm(form, lang) {
+  try {
+    const data = new FormData(form);
+    const page = (location.pathname.replace(/\/|\.html$/g, '') || 'home');
+    const payload = {
+      name: (data.get('name') || '').toString().slice(0, 200),
+      email: (data.get('email') || '').toString().slice(0, 200),
+      company: (data.get('brand') || data.get('company') || '').toString().slice(0, 200),
+      message: (data.get('goals') || data.get('message') || '').toString().slice(0, 4000),
+      source: page === 'home' ? 'contact-form' : page,
+      lang: lang,
+      botcheck: (data.get('botcheck') || '').toString()
+    };
+    fetch('https://portal.editorsunited.com/api/leads/intake', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true,
+      signal: typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(4000) : undefined
+    }).catch(() => {});
+  } catch { /* never block the form */ }
 }
 
 /* ── Motion: scroll reveals ── */
