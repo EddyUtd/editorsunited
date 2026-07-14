@@ -14,7 +14,7 @@ loud. Dark surfaces exist, but they are *reserved*: video frames, the featured p
 and the footer are the only dark zones on the site. One accent color, used sparingly, always
 means "action or focus" — like a playhead on a timeline.
 
-Company: **Editors United Ltd.** — bilingual (EN/FR) short-form video editing, Montréal QC.
+Company: **EditorsUnited Ltd.** — bilingual (EN/FR) short-form video editing, Montréal QC.
 Wordmark: **EditorsUnited** (one word, camel-cased in the mark; see §3).
 
 ## 2. Color tokens

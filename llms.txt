@@ -1,6 +1,6 @@
-# Editors United
+# EditorsUnited
 
-> Editors United Ltd. is a bilingual (English/French) video editing agency based in Montréal, Québec, Canada, founded in 2021 by Michael Attia. It specializes in short-form video (TikTok, Reels, Shorts) for coaches, financial advisors, real-estate agents, and creators across Canada and the USA.
+> EditorsUnited Ltd. is a bilingual (English/French) video editing agency based in Montréal, Québec, Canada, founded in 2021 by Michael Attia. It specializes in short-form video (TikTok, Reels, Shorts) for coaches, financial advisors, real-estate agents, and creators across Canada and the USA.
 
 ## What we do
 
