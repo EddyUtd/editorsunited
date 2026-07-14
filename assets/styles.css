@@ -1,20 +1,22 @@
 /* ============================================================
-   EDITORSUNITED — "EDIT BAY" DESIGN SYSTEM · WARM LIGHT THEME
-   Warm paper bands, one amber playhead accent, Montserrat voice,
-   mono timecode detail language. Dark reserved for video frames,
-   the featured pricing card, and the footer.
+   EDITORSUNITED — "STUDIO LIGHT" v2 DESIGN SYSTEM
+   Neutral studio-light surfaces, one amber playhead accent,
+   a creative gradient for primary CTAs and the hero highlight,
+   Montserrat voice, mono timecode detail language.
+   Dark is reserved EXCLUSIVELY for video frames/players and
+   the EU mark tile — nothing else is dark.
    ============================================================ */
 
 :root {
-  /* light — warm paper */
-  --paper: #FDFBF7;
-  --paper-2: #F6F1E7;
-  --paper-3: #EFE7D7;
+  /* light — neutral studio surfaces */
+  --paper: #FFFFFF;
+  --paper-2: #F7F7F5;
+  --paper-3: #EFEFED;
   --white: #FFFFFF;
-  --ink: #262A33;
-  --muted: #5D6472;
-  --line-light: rgba(38, 42, 51, 0.14);
-  /* dark — used sparingly (footer, featured card, video frames) */
+  --ink: #1D1D1F;
+  --muted: #6E6E73;
+  --line-light: rgba(0, 0, 0, 0.08);
+  /* dark — video frames/players and the EU mark tile ONLY */
   --bay: #23262E;
   --bay-2: #2C303A;
   --bay-3: #343945;
@@ -27,15 +29,19 @@
   --signal-deep: #7A5B00;
   --signal-glow: rgba(255, 194, 75, 0.35);
   --signal-tint: rgba(255, 194, 75, 0.14);
-  /* functional */
+  /* creative gradient — primary CTAs, hero highlight, key stats ONLY */
+  --grad-signal: linear-gradient(135deg, #FFC24B, #FF8A5C);
+  /* functional (on light) */
   --rec: #FF5C5C;
   --ok-dark: #7FD99A;
   --ok-light: #256B33;
   --err-dark: #FF8B8B;
   --err-light: #B3261E;
+  --info-light: #2563EB;
+  --warn-light: #B45309;
   /* type */
   --font-display: 'Montserrat', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --font-mono: 'Montserrat', system-ui, sans-serif; /* owner rule: Montserrat everywhere — mono retired 2026-07-14 */
   --fs-hero: clamp(2.3rem, 4.6vw, 3.8rem);
   --fs-h2: clamp(1.75rem, 3.1vw, 2.5rem);
   --fs-h3: 1.2rem;
@@ -43,11 +49,11 @@
   --fs-body: 1rem;
   --fs-mono-label: 0.75rem;
   --fs-price: clamp(1.9rem, 2.8vw, 2.4rem);
-  /* geometry — friendly and soft */
-  --radius-s: 10px;
-  --radius-m: 16px;
-  --radius-l: 22px;
-  --shadow-card: 0 1px 2px rgba(90, 68, 20, .05), 0 6px 22px rgba(90, 68, 20, .07);
+  /* geometry — airy and soft */
+  --radius-s: 12px;
+  --radius-m: 18px;
+  --radius-l: 24px;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, .04), 0 8px 24px rgba(0, 0, 0, .06);
   --container: 1180px;
   /* motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -127,7 +133,7 @@ h1, h2, h3, h4 { font-weight: 800; }
 }
 .site-footer .tc-ruler,
 .tc-ruler.on-dark { color: var(--line-light); }
-.hero .tc-ruler { color: rgba(38, 42, 51, 0.22); }
+.hero .tc-ruler { color: rgba(0, 0, 0, 0.16); }
 
 /* tc-label — the ONE eyebrow style */
 .tc-label {
@@ -190,7 +196,7 @@ h1, h2, h3, h4 { font-weight: 800; }
   clip-path: polygon(0 0, 100% 0, 100% 55%, 50% 100%, 0 55%);
 }
 
-/* film grain — footer only in the light theme */
+/* film grain — retired in Studio Light (no dark bands remain) */
 .section-dark,
 .hero,
 .section-logos,
@@ -198,15 +204,7 @@ h1, h2, h3, h4 { font-weight: 800; }
   position: relative;
 }
 .grain::after { content: none; }
-.site-footer.grain::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.05;
-  z-index: 1;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+.site-footer.grain::after { content: none; }
 .grain > .container { position: relative; z-index: 2; }
 
 /* in/out corner brackets — hero video + featured pricing only */
@@ -233,9 +231,9 @@ h1, h2, h3, h4 { font-weight: 800; }
   border-right: 3px solid var(--signal);
 }
 
-/* headline marker sweep — thick amber underline */
+/* headline marker sweep — creative-gradient underline (hero highlight) */
 .hl {
-  background-image: linear-gradient(var(--signal), var(--signal));
+  background-image: var(--grad-signal);
   background-repeat: no-repeat;
   background-size: 100% 0.18em;
   background-position: 0 96%;
@@ -264,7 +262,7 @@ h1, h2, h3, h4 { font-weight: 800; }
 }
 
 /* ============================================================
-   HEADER — warm light
+   HEADER — studio light
    ============================================================ */
 .site-header {
   position: sticky;
@@ -272,13 +270,13 @@ h1, h2, h3, h4 { font-weight: 800; }
   z-index: 50;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(253, 251, 247, 0.9);
+  background: rgba(255, 255, 255, 0.88);
   border-bottom: 1px solid var(--line-light);
   transition: border-color var(--t-fast) var(--ease-out), box-shadow var(--t-fast);
 }
 .site-header.is-scrolled {
-  border-bottom-color: rgba(38, 42, 51, 0.24);
-  box-shadow: 0 4px 18px rgba(90, 68, 20, 0.06);
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
 }
 
 .nav-wrap {
@@ -391,12 +389,13 @@ h1, h2, h3, h4 { font-weight: 800; }
 }
 .lang-btn:hover { color: var(--ink); }
 .lang-btn.active {
-  background: var(--ink);
-  color: var(--signal);
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 /* ============================================================
-   SECTIONS / BANDS — warm rhythm: white → cream → deep cream
+   SECTIONS / BANDS — neutral rhythm: white → alt band → deep band
    ============================================================ */
 .section { padding: 5rem 0; }
 .section-tight { padding: 4rem 0; }
@@ -404,16 +403,16 @@ h1, h2, h3, h4 { font-weight: 800; }
 
 .section-soft {
   background: var(--paper-2);
-  border-top: 1px solid rgba(38, 42, 51, 0.08);
-  border-bottom: 1px solid rgba(38, 42, 51, 0.08);
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
 }
 
-/* former dark bands → deepest warm cream, still light and inviting */
+/* former dark bands → deep neutral gray, still light and calm */
 .section-dark {
   background: var(--paper-3);
   color: var(--ink);
-  border-top: 1px solid rgba(38, 42, 51, 0.08);
-  border-bottom: 1px solid rgba(38, 42, 51, 0.08);
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
 }
 .section-dark p,
 .section-dark .muted,
@@ -443,7 +442,7 @@ h1, h2, h3, h4 { font-weight: 800; }
 .centered-row { justify-content: center; }
 
 /* ============================================================
-   HERO — warm, bright, welcoming
+   HERO — bright, neutral, welcoming
    ============================================================ */
 .hero {
   padding: 4.5rem 0 4rem;
@@ -610,7 +609,7 @@ h1 {
 }
 .stat span { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
 
-/* hero video — the one dark element: a monitor frame */
+/* hero video — dark allowed here: it is a monitor frame */
 .hero-card {
   background: var(--bay);
   border: 1px solid var(--bay-3);
@@ -618,7 +617,7 @@ h1 {
   padding: 1.1rem;
   position: relative;
   z-index: 2;
-  box-shadow: 0 24px 50px rgba(60, 45, 10, 0.18);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.14);
 }
 .hero-video {
   position: relative;
@@ -702,8 +701,8 @@ h1 {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: rgba(253, 251, 247, 0.92);
-  border: 1px solid rgba(38, 42, 51, 0.15);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   display: grid;
   place-items: center;
   transition: transform var(--t-fast) var(--ease-out), background var(--t-fast);
@@ -739,7 +738,7 @@ h1 {
 }
 
 /* ============================================================
-   LOGO MARQUEE — warm cream band
+   LOGO MARQUEE — neutral alt band
    ============================================================ */
 .section-logos {
   padding: 2.25rem 0;
@@ -825,7 +824,7 @@ h1 {
 .logo-pill.logo-missing { display: none; }
 
 /* ============================================================
-   BUTTONS — warm and friendly
+   BUTTONS — gradient primary, hairline secondary
    ============================================================ */
 .btn {
   display: inline-flex;
@@ -852,32 +851,36 @@ h1 {
 }
 
 .btn-primary {
-  background: var(--signal);
+  background: var(--grad-signal);
   color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: transform var(--t-fast) var(--ease-out), filter var(--t-fast),
+              color var(--t-fast), border-color var(--t-fast), box-shadow var(--t-fast);
 }
 .btn-primary:hover {
-  background: var(--signal-hover);
-  box-shadow: 0 8px 22px var(--signal-glow);
+  filter: brightness(1.05) saturate(1.05);
+  box-shadow: 0 10px 26px var(--signal-glow);
 }
 
 .btn-secondary {
   background: var(--white);
   color: var(--ink);
-  border-color: rgba(38, 42, 51, 0.22);
+  border-color: rgba(0, 0, 0, 0.14);
 }
 .btn-secondary:hover { border-color: var(--ink); }
 .btn-ghost-light {
   background: var(--white);
   color: var(--ink);
-  border-color: rgba(38, 42, 51, 0.22);
+  border-color: rgba(0, 0, 0, 0.14);
 }
 .btn-ghost-light:hover { border-color: var(--ink); }
 
 .btn-light {
-  background: var(--signal);
+  background: var(--grad-signal);
   color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
-.btn-light:hover { background: var(--signal-hover); box-shadow: 0 8px 22px var(--signal-glow); }
+.btn-light:hover { filter: brightness(1.05) saturate(1.05); box-shadow: 0 10px 26px var(--signal-glow); }
 
 .btn-block { width: 100%; }
 .btn-sm { min-height: 40px; padding: 0.55rem 1rem; font-size: 0.88rem; }
@@ -901,7 +904,7 @@ button:focus-visible,
 .site-footer a:focus-visible,
 .price-card.featured a:focus-visible,
 .price-card.featured button:focus-visible {
-  outline-color: var(--signal);
+  outline-color: var(--signal-deep);
 }
 
 .eyebrow-link {
@@ -941,7 +944,7 @@ button:focus-visible,
 }
 .card:hover {
   transform: translateY(-3px);
-  border-color: rgba(38, 42, 51, 0.3);
+  border-color: rgba(0, 0, 0, 0.18);
 }
 .card:hover::before { background: var(--signal); }
 
@@ -1013,7 +1016,7 @@ button:focus-visible,
   border-radius: var(--radius-l);
   overflow: hidden;
   background: #000;
-  border: 1px solid rgba(38, 42, 51, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.16);
   box-shadow: var(--shadow-card);
   transition: border-color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out);
 }
@@ -1197,16 +1200,18 @@ button:focus-visible,
   position: relative;
   transition: transform var(--t-fast) var(--ease-out), border-color var(--t-fast);
 }
-.price-card:hover { border-color: rgba(38, 42, 51, 0.3); }
+.price-card:hover { border-color: rgba(0, 0, 0, 0.18); }
 
-/* the ONE dark spotlight: the featured tier */
+/* the spotlight tier — white card with a gradient frame */
 .price-card.featured {
-  background: var(--bay);
-  color: var(--text-hi);
-  border-color: var(--bay);
+  background: linear-gradient(var(--white), var(--white)) padding-box,
+              var(--grad-signal) border-box;
+  color: var(--ink);
+  border: 2px solid transparent;
   transform: translateY(-8px);
-  box-shadow: 0 24px 50px rgba(60, 45, 10, 0.18);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .05), 0 20px 48px rgba(0, 0, 0, .10);
 }
+.price-card.featured:hover { border-color: transparent; }
 .price-card.featured::before {
   content: '';
   position: absolute;
@@ -1220,10 +1225,10 @@ button:focus-visible,
   filter: drop-shadow(0 0 6px var(--signal-glow));
 }
 .price-card.featured p,
-.price-card.featured li { color: var(--text-lo); }
-.price-card.featured .price-name { color: var(--text-lo); }
-.price-card.featured .btn-primary { background: var(--signal); color: var(--ink); }
-.price-card.featured .btn-primary:hover { background: var(--signal-hover); }
+.price-card.featured li { color: var(--muted); }
+.price-card.featured .price-name { color: var(--muted); }
+.price-card.featured .btn-primary { background: var(--grad-signal); color: var(--ink); }
+.price-card.featured .btn-primary:hover { filter: brightness(1.05) saturate(1.05); }
 
 .price-name {
   color: var(--muted);
@@ -1252,7 +1257,7 @@ button:focus-visible,
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
-.price-card.featured .price-cost { color: var(--text-hi); }
+.price-card.featured .price-cost { color: var(--ink); }
 .price-cost .price-period {
   font-size: 1rem;
   font-weight: 600;
@@ -1288,8 +1293,8 @@ button:focus-visible,
   font-weight: 500;
   color: var(--muted);
 }
-.price-card.featured .price-volume strong { color: var(--text-hi); }
-.price-card.featured .price-volume span { color: var(--text-lo); }
+.price-card.featured .price-volume strong { color: var(--ink); }
+.price-card.featured .price-volume span { color: var(--muted); }
 
 .price-per {
   font-family: var(--font-mono);
@@ -1300,7 +1305,7 @@ button:focus-visible,
   margin-bottom: 0.5rem;
   font-variant-numeric: tabular-nums;
 }
-.price-card.featured .price-per { color: var(--signal); }
+.price-card.featured .price-per { color: var(--signal-deep); }
 
 .price-badge {
   display: inline-block;
@@ -1330,7 +1335,7 @@ button:focus-visible,
   font-variant-numeric: tabular-nums;
 }
 .pricing-grid[data-billing="annual"] .price-old:not(:empty) { display: inline-block; }
-.price-card.featured .price-old { color: var(--err-dark); }
+.price-card.featured .price-old { color: var(--err-light); }
 
 .pricing-lede {
   text-align: center;
@@ -1364,7 +1369,7 @@ button:focus-visible,
   cursor: pointer;
   transition: background var(--t-fast), color var(--t-fast);
 }
-.bill-btn.active { background: var(--ink); color: var(--signal); }
+.bill-btn.active { background: var(--signal); color: var(--ink); }
 .bill-btn:hover:not(.active) { color: var(--ink); }
 
 .pricing-offer-note {
@@ -1501,7 +1506,7 @@ input, textarea {
   font: inherit;
   transition: box-shadow 150ms var(--ease-out), border-color 150ms;
 }
-input::placeholder, textarea::placeholder { color: #7B818D; }
+input::placeholder, textarea::placeholder { color: #8E8E93; }
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--signal);
@@ -1544,14 +1549,15 @@ textarea.field-error {
 
 
 /* ============================================================
-   FOOTER — end of reel (stays dark for grounding)
+   FOOTER — end of reel (light, hairline-framed)
    ============================================================ */
 .site-footer {
   padding: 0;
-  background: var(--bay);
-  color: var(--text-lo);
+  background: var(--paper-2);
+  color: var(--muted);
+  border-top: 1px solid var(--line-light);
 }
-.site-footer .tc-ruler { color: var(--line-dark); }
+.site-footer .tc-ruler { color: var(--line-light); }
 .footer-row {
   display: flex;
   justify-content: space-between;
@@ -1561,7 +1567,7 @@ textarea.field-error {
   padding: 1.5rem 0;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  color: var(--text-lo);
+  color: var(--muted);
   position: relative;
   z-index: 2;
 }
@@ -1571,7 +1577,7 @@ textarea.field-error {
   transition: color var(--t-fast);
 }
 .footer-links a:hover {
-  color: var(--text-hi);
+  color: var(--signal-deep);
   text-decoration: underline;
   text-decoration-color: var(--signal);
   text-underline-offset: 4px;
@@ -1579,11 +1585,11 @@ textarea.field-error {
 .footer-leader {
   height: 30px;
   background:
-    repeating-linear-gradient(90deg, var(--line-dark) 0 1px, transparent 1px 12px) 0 50% / 100% 8px no-repeat;
+    repeating-linear-gradient(90deg, var(--line-light) 0 1px, transparent 1px 12px) 0 50% / 100% 8px no-repeat;
   position: relative;
   z-index: 2;
 }
-.footer-eor { color: var(--text-lo); opacity: 0.7; }
+.footer-eor { color: var(--muted); opacity: 0.8; }
 
 /* ============================================================
    SERVICES TIMELINE
@@ -1615,8 +1621,9 @@ textarea.field-error {
   width: 3rem;
   height: 3rem;
   border-radius: var(--radius-s);
-  background: var(--ink);
-  color: var(--signal);
+  background: var(--signal-tint);
+  border: 1px solid rgba(255, 194, 75, 0.5);
+  color: var(--signal-deep);
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
@@ -1673,7 +1680,7 @@ textarea.field-error {
   border-radius: var(--radius-l);
   overflow: hidden;
   border: 1px solid var(--line-light);
-  box-shadow: 0 24px 50px rgba(60, 45, 10, 0.16);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.10);
   aspect-ratio: 3 / 4;
   background: var(--paper-2);
   display: grid;
@@ -1692,9 +1699,9 @@ textarea.field-error {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(155deg, #B08A3E 0%, #4A3D26 100%);
+  background: var(--signal);
   mix-blend-mode: color;
-  opacity: 0.9;
+  opacity: 0.22;
   pointer-events: none;
   z-index: 1;
 }
@@ -1846,7 +1853,7 @@ textarea.field-error {
   line-height: 0.9;
   letter-spacing: -0.04em;
   margin: 0 0 1rem;
-  color: var(--signal);
+  color: var(--signal-deep);
   text-shadow: 0 4px 24px var(--signal-glow);
   font-variant-numeric: tabular-nums;
 }
@@ -1873,7 +1880,7 @@ textarea.field-error {
   border: 1px solid var(--line-light);
   border-top: 3px solid var(--signal);
   border-radius: var(--radius-m);
-  box-shadow: 0 16px 48px rgba(60, 45, 10, 0.22);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
   animation: cookie-slide-in 0.3s ease-out;
 }
 @keyframes cookie-slide-in {

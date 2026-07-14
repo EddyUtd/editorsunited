@@ -60,15 +60,20 @@ Hard rules:
 
 ## 4. Typography
 
+**Montserrat is the ONLY typeface** (owner rule, 2026-07-14): every heading, body line, tab,
+label, overlay, timecode, and micro-label — no secondary or mono font, ever.
+
 | Use | Font | Weights | Notes |
 |---|---|---|---|
-| Display & UI | **Montserrat** | 400 / 500 / 600 / 700 / 800 | Headings at 800. Body 400, line-height 1.65. |
-| Timecode / labels | **JetBrains Mono** | 400 / 600 | Uppercase micro-labels, `letter-spacing ~0.12em`, size `0.75rem` (`--fs-mono-label`). |
+| Everything | **Montserrat** | 400 / 500 / 600 / 700 / 800 | Headings 800. Body 400, line-height 1.65. Micro-labels: 600, uppercase, `letter-spacing ~0.12em`, size `0.75rem`. |
+
+(`--font-mono` still exists as a variable for legacy rules but resolves to Montserrat —
+JetBrains Mono was retired; if you see it loading anywhere, that's a bug.)
 
 Fluid scale (don't invent sizes): `--fs-hero clamp(2.3rem,4.6vw,3.8rem)`,
 `--fs-h2 clamp(1.75rem,3.1vw,2.5rem)`, `--fs-h3 1.2rem`, `--fs-lead 1.1rem`, `--fs-body 1rem`,
 `--fs-price clamp(1.9rem,2.8vw,2.4rem)`.
-Load via Google Fonts: `Montserrat:wght@400;500;600;700;800` + `JetBrains+Mono:wght@400;600`.
+Load via Google Fonts: `Montserrat:wght@400;500;600;700;800` only.
 
 ## 5. Motifs (the detail language)
 

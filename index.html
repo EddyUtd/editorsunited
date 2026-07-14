@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EditorsUnited | Short-Form Video That Fills Your Calendar</title>
-  <meta name="description" content="EditorsUnited edits TikToks, Reels, and Shorts for coaches, advisors, and service pros who want their content to generate booked clients — not just views." />
+  <meta name="description" content="EditorsUnited is a Montréal video editing agency specializing in short-form video — TikToks, Reels, and Shorts edited for coaches, advisors, and service pros who want booked clients, not just views." />
   <link rel="canonical" href="https://editorsunited.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="EditorsUnited" />
   <meta property="og:url" content="https://editorsunited.com/" />
   <meta property="og:title" content="EditorsUnited | Short-Form Video That Fills Your Calendar" />
-  <meta property="og:description" content="EditorsUnited edits TikToks, Reels, and Shorts for coaches, advisors, and service pros who want their content to generate booked clients — not just views." />
+  <meta property="og:description" content="EditorsUnited is a Montréal video editing agency specializing in short-form video — TikToks, Reels, and Shorts edited for coaches, advisors, and service pros who want booked clients, not just views." />
   <meta property="og:image" content="https://editorsunited.com/assets/og-image.jpg" />
   <meta property="og:locale" content="en_CA" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -21,31 +21,75 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://i.ytimg.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/styles.css?v=20260713" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=20260713" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260714" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=20260714" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "EditorsUnited",
-    "description": "Short-form video editing for coaches, advisors, and service professionals. TikToks, Reels, and Shorts edited to convert viewers into booked clients.",
-    "url": "https://editorsunited.com/",
-    "logo": "https://editorsunited.com/assets/logo.svg",
-    "image": "https://editorsunited.com/assets/og-image.jpg",
-    "email": "support@editorsunited.com",
-    "founder": { "@type": "Person", "name": "Michael Attia" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
-    "areaServed": [
-      { "@type": "Country", "name": "Canada" },
-      { "@type": "Country", "name": "United States" }
-    ],
-    "availableLanguage": ["English", "French"],
-    "priceRange": "$$",
-    "serviceType": "Short-form video editing"
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://editorsunited.com/#organization",
+        "name": "EditorsUnited",
+        "legalName": "Editors United Ltd.",
+        "description": "Bilingual English/French video editing agency in Montréal specializing in short-form video (TikTok, Reels, Shorts) for coaches, financial advisors, real-estate agents, and creators across Canada and the USA.",
+        "url": "https://editorsunited.com/",
+        "logo": "https://editorsunited.com/assets/logo.svg",
+        "image": "https://editorsunited.com/assets/og-image.jpg",
+        "email": "support@editorsunited.com",
+        "foundingDate": "2021",
+        "founder": { "@type": "Person", "name": "Michael Attia" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "QC", "addressCountry": "CA" },
+        "areaServed": [
+          { "@type": "Country", "name": "Canada" },
+          { "@type": "Country", "name": "United States" }
+        ],
+        "availableLanguage": ["en", "fr"],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "ratingCount": "50" },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "799",
+            "priceCurrency": "CAD",
+            "description": "About 7 short-form videos per month with hook and caption optimization. $799 CAD/month; annual billing about 15% less."
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth",
+            "price": "1499",
+            "priceCurrency": "CAD",
+            "description": "15 short-form videos per month with a dedicated editor and monthly strategy call. Most popular plan. $1,499 CAD/month; annual billing about 15% less."
+          },
+          {
+            "@type": "Offer",
+            "name": "Scale",
+            "price": "2699",
+            "priceCurrency": "CAD",
+            "description": "30 short-form videos per month with unlimited revisions and the fastest turnaround. $2,699 CAD/month; annual billing about 15% less."
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://editorsunited.com/#website",
+        "url": "https://editorsunited.com/",
+        "name": "EditorsUnited",
+        "inLanguage": ["en-CA", "fr-CA"],
+        "publisher": { "@id": "https://editorsunited.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://editorsunited.com/faq#faqpage",
+        "url": "https://editorsunited.com/faq",
+        "name": "Video Editing Agency FAQ",
+        "about": { "@id": "https://editorsunited.com/#organization" }
+      }
+    ]
   }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ6RZ101PV"></script>
@@ -62,7 +106,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="/" aria-label="EditorsUnited — Home">
-        <img class="brand-mark" src="/assets/mark.svg?v=20260713" width="34" height="34" alt="" />
+        <img class="brand-mark" src="/assets/mark.svg?v=20260714" width="34" height="34" alt="" />
         <span class="brand-word">Editors<em>United</em></span>
       </a>
       <nav class="nav-links">
@@ -449,6 +493,7 @@
         <a href="/services" data-i18n="nav.services">Services</a>
         <a href="/portfolio" data-i18n="footer.portfolio">Portfolio</a>
         <a href="/contact" data-i18n="footer.contact">Contact</a>
+        <a href="/faq" data-i18n="nav.faq">FAQ</a>
         <a href="/privacy" data-i18n="footer.privacy">Privacy</a>
         <a href="/policies" data-i18n="footer.policies">Policies</a>
       </div>
@@ -456,8 +501,8 @@
     <div class="footer-leader" aria-hidden="true"></div>
   </footer>
 
-  <script src="/assets/translations.js?v=20260713"></script>
-  <script src="/assets/translations-auto.js?v=20260713"></script>
-  <script src="/assets/site.js?v=20260713"></script>
+  <script src="/assets/translations.js?v=20260714"></script>
+  <script src="/assets/translations-auto.js?v=20260714"></script>
+  <script src="/assets/site.js?v=20260714"></script>
 </body>
 </html>
