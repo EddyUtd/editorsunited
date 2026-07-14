@@ -299,7 +299,10 @@ function setupForm(form) {
   const successEl = form.querySelector('[data-success]');
   const errorEl = form.querySelector('[data-error]');
   if (!btn || !successEl || !errorEl) return;
-  const securityReady = setupContactSecurity(form).catch(() => ({ enabled: true, widgetId: null, failed: true }));
+  // The server is the enforcement boundary. During a rolling deployment an
+  // older portal may not expose /api/public/config yet; submit normally and
+  // let a CAPTCHA-enabled backend reject any request without a valid token.
+  const securityReady = setupContactSecurity(form).catch(() => ({ enabled: false, widgetId: null }));
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -330,7 +333,6 @@ function setupForm(form) {
 
     try {
       const security = await securityReady;
-      if (security.failed) throw new Error('Security verification unavailable');
       const turnstileToken = security.enabled && window.turnstile && security.widgetId !== null
         ? window.turnstile.getResponse(security.widgetId)
         : '';
