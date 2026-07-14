@@ -251,6 +251,8 @@ function setLanguage(lang) {
 
 /* ── Contact forms ── */
 
+const CONTACT_ENDPOINT = 'https://portal.editorsunited.com/api/leads/intake';
+
 function setupForm(form) {
   const btn = form.querySelector('[data-submit-btn]');
   const successEl = form.querySelector('[data-success]');
@@ -284,16 +286,27 @@ function setupForm(form) {
     successEl.hidden = true;
     errorEl.hidden = true;
 
-    mirrorLeadToCrm(form, lang);
-
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const data = new FormData(form);
+      const page = (location.pathname.replace(/\/|\.html$/g, '') || 'home');
+      const payload = {
+        name: (data.get('name') || '').toString().slice(0, 200),
+        email: (data.get('email') || '').toString().slice(0, 200),
+        company: (data.get('brand') || data.get('company') || '').toString().slice(0, 200),
+        message: (data.get('goals') || data.get('message') || '').toString().slice(0, 4000),
+        source: form.dataset.source || (page === 'home' ? 'website-home' : 'website-' + page),
+        lang,
+        botcheck: (data.get('botcheck') || '').toString()
+      };
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        body: new FormData(form)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(8000) : undefined
       });
-      const json = await res.json();
+      const json = await res.json().catch(() => ({}));
 
-      if (json.success) {
+      if (res.ok && json.ok) {
         form.reset();
         successEl.hidden = false;
         btn.textContent = getT(lang, 'form.sent') || 'Sent';
@@ -304,7 +317,7 @@ function setupForm(form) {
           btn.textContent = getT(document.documentElement.lang || 'en', 'form.submit') || 'Submit inquiry';
         }, 4000);
       } else {
-        throw new Error(json.message || 'Submission failed');
+        throw new Error(json.error || 'Submission failed');
       }
     } catch {
       errorEl.hidden = false;
@@ -319,32 +332,6 @@ function setupForm(form) {
       field.removeAttribute('aria-invalid');
     });
   });
-}
-
-/* Mirror the lead into the EditorsUnited CRM. Fire-and-forget: the user-facing
-   submission flow is Web3Forms; if the portal is unreachable this must never
-   affect the UX (and the lead still arrives by email). */
-function mirrorLeadToCrm(form, lang) {
-  try {
-    const data = new FormData(form);
-    const page = (location.pathname.replace(/\/|\.html$/g, '') || 'home');
-    const payload = {
-      name: (data.get('name') || '').toString().slice(0, 200),
-      email: (data.get('email') || '').toString().slice(0, 200),
-      company: (data.get('brand') || data.get('company') || '').toString().slice(0, 200),
-      message: (data.get('goals') || data.get('message') || '').toString().slice(0, 4000),
-      source: page === 'home' ? 'contact-form' : page,
-      lang: lang,
-      botcheck: (data.get('botcheck') || '').toString()
-    };
-    fetch('https://portal.editorsunited.com/api/leads/intake', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-      keepalive: true,
-      signal: typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(4000) : undefined
-    }).catch(() => {});
-  } catch { /* never block the form */ }
 }
 
 /* ── Motion: scroll reveals ── */

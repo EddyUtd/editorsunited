@@ -452,10 +452,8 @@
             <span class="form-head-title" data-i18n="contactSection.formTitle">New project — brief us</span>
             <span class="form-head-chip" data-i18n="contactSection.formChip">Response &lt; 24h</span>
           </div>
-          <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="727e79a3-15c6-45dc-827c-8b836f81c691" />
-            <input type="hidden" name="subject" value="New inquiry — EditorsUnited website" />
-            <input type="hidden" name="from_name" value="EditorsUnited Website" />
+          <form data-contact-form data-source="website-home" action="https://portal.editorsunited.com/api/leads/intake" method="POST">
+            <input type="hidden" name="source" value="website-home" />
             <div>
               <label for="name" data-i18n="form.nameLabel">Full name</label>
               <input id="name" name="name" type="text" placeholder="Your name" data-i18n-ph="form.namePH" required />
