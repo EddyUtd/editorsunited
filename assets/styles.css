@@ -1546,6 +1546,7 @@ textarea.field-error {
 }
 .form-privacy-note a { text-decoration: underline; text-underline-offset: 2px; }
 .form-privacy-note a:hover { color: var(--signal-deep); }
+.turnstile-slot { grid-column: 1 / -1; min-height: 65px; overflow: hidden; }
 
 
 /* ============================================================

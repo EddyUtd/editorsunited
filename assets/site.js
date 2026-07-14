@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function track(name, params) {
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', name, params || {});
-  }
+  try {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  } catch { /* analytics must never break customer-facing actions */ }
 }
 
 function setupCalendlyTracking() {
@@ -252,12 +252,54 @@ function setLanguage(lang) {
 /* ── Contact forms ── */
 
 const CONTACT_ENDPOINT = 'https://portal.editorsunited.com/api/leads/intake';
+const CONTACT_CONFIG_ENDPOINT = 'https://portal.editorsunited.com/api/public/config';
+let turnstileScriptPromise = null;
+
+function loadTurnstileScript() {
+  if (window.turnstile) return Promise.resolve(window.turnstile);
+  if (turnstileScriptPromise) return turnstileScriptPromise;
+  turnstileScriptPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    script.async = true;
+    script.defer = true;
+    script.onload = () => window.turnstile ? resolve(window.turnstile) : reject(new Error('Turnstile unavailable'));
+    script.onerror = () => reject(new Error('Turnstile failed to load'));
+    document.head.appendChild(script);
+  });
+  return turnstileScriptPromise;
+}
+
+async function setupContactSecurity(form) {
+  const response = await fetch(CONTACT_CONFIG_ENDPOINT, {
+    headers: { Accept: 'application/json' },
+    signal: typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(8000) : undefined
+  });
+  const config = await response.json();
+  if (!config.turnstile || !config.turnstile.enabled || !config.turnstile.siteKey) {
+    return { enabled: false, widgetId: null };
+  }
+  const api = await loadTurnstileScript();
+  const slot = document.createElement('div');
+  slot.className = 'turnstile-slot';
+  slot.setAttribute('aria-label', 'Security verification');
+  const privacy = form.querySelector('.form-privacy-note');
+  form.insertBefore(slot, privacy || form.querySelector('[data-submit-btn]'));
+  const widgetId = api.render(slot, {
+    sitekey: config.turnstile.siteKey,
+    action: 'lead_form',
+    theme: 'light',
+    size: 'flexible'
+  });
+  return { enabled: true, widgetId };
+}
 
 function setupForm(form) {
   const btn = form.querySelector('[data-submit-btn]');
   const successEl = form.querySelector('[data-success]');
   const errorEl = form.querySelector('[data-error]');
   if (!btn || !successEl || !errorEl) return;
+  const securityReady = setupContactSecurity(form).catch(() => ({ enabled: true, widgetId: null, failed: true }));
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -287,6 +329,12 @@ function setupForm(form) {
     errorEl.hidden = true;
 
     try {
+      const security = await securityReady;
+      if (security.failed) throw new Error('Security verification unavailable');
+      const turnstileToken = security.enabled && window.turnstile && security.widgetId !== null
+        ? window.turnstile.getResponse(security.widgetId)
+        : '';
+      if (security.enabled && !turnstileToken) throw new Error('Complete the security verification');
       const data = new FormData(form);
       const page = (location.pathname.replace(/\/|\.html$/g, '') || 'home');
       const payload = {
@@ -296,7 +344,8 @@ function setupForm(form) {
         message: (data.get('goals') || data.get('message') || '').toString().slice(0, 4000),
         source: form.dataset.source || (page === 'home' ? 'website-home' : 'website-' + page),
         lang,
-        botcheck: (data.get('botcheck') || '').toString()
+        botcheck: (data.get('botcheck') || '').toString(),
+        turnstileToken
       };
       const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
@@ -308,6 +357,7 @@ function setupForm(form) {
 
       if (res.ok && json.ok) {
         form.reset();
+        if (security.enabled && window.turnstile) window.turnstile.reset(security.widgetId);
         successEl.hidden = false;
         btn.textContent = getT(lang, 'form.sent') || 'Sent';
         track('generate_lead', { method: 'contact_form', value: 1, currency: 'CAD' });
@@ -316,6 +366,7 @@ function setupForm(form) {
           btn.disabled = false;
           btn.textContent = getT(document.documentElement.lang || 'en', 'form.submit') || 'Submit inquiry';
         }, 4000);
+        return;
       } else {
         throw new Error(json.error || 'Submission failed');
       }
